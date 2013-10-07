@@ -29,6 +29,14 @@
 				</article>
 			 <?php endwhile; ?>
 		</div>
+
+		<div class="nav">
+			<?php 
+				if(function_exists('wp_pagenavi')) {
+				wp_pagenavi();
+				}
+			?>
+		</div>
 	</section>
 
 <?php get_footer(); ?>
