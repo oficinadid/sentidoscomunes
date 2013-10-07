@@ -22,20 +22,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/inc/css/style.less" />
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/inc/css/media.less" />
-
-
-<script type="text/javascript">
-    less = {
-        env: "development", // or "production"
-        dumpLineNumbers: "comments", // or "mediaQuery" or "all"
-    };
-</script>
+<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/main.css" />
 
 <script src="<?php echo get_template_directory_uri(); ?>/inc/js/modernizr.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/inc/js/less.js" type="text/javascript"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
