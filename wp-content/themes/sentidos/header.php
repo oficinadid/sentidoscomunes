@@ -91,16 +91,15 @@
 				<?php endwhile; wp_reset_postdata(); endif; ?>
 			</ul>
 		</div>
+		<ul class="social">
+			<li class="facebook"><a href="https://www.facebook.com/pages/Sentidos-Comunes/162551567123399" title="Únete a nuestro Fan Page en Facebook">Facebook</a></li>
+
+			<li class="twitter"><a href="https://twitter.com/sentidoscomunes" title="Siguenos en Twitter">Twitter</a></li>			<li class="instagram"><a href="https://instagram.com/sentidoscomunes">Instagram</a></li>
+		</ul>
 		<div class="main_menu">
 			<?php wp_nav_menu(array('menu' => 'Main Menu' )); ?>
-
-			<ul class="social">
-				<li class="twitter"><a href="https://twitter.com/sentidoscomunes" title="Siguenos en Twitter">Twitter</a></li>
-				<li class="facebook"><a href="https://www.facebook.com/pages/Sentidos-Comunes/162551567123399" title="Únete a nuestro Fan Page en Facebook">Facebook</a></li>
-				<li class="instagram"><a href="https://instagram.com/sentidoscomunes">Instagram</a></li>
-				<li class="search"><a href="#search_form">Search</a></li>
-			</ul>
 		</div>
+		<div class="search"><a href="#search_form">Search</a></div>
 	</nav>
 </header>
 

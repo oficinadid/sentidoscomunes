@@ -23,7 +23,7 @@ $j(document).ready(function() {
 	};
 
 
-    $j('li.search a').on('click', function(){
+    $j('.search a').on('click', function(){
 		$j('#search_form').toggleClass('hidden');
 		$j('body').toggleClass('searching');
 		$j(this).toggleClass('pressed');
