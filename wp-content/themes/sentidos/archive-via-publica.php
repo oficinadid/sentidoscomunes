@@ -22,6 +22,11 @@
 				</article>
 			 <?php endwhile; ?>
 		</div>
+		<?php 
+			if(function_exists('wp_pagenavi')) {
+			wp_pagenavi();
+			}
+		?>
 	</section>
 
 <?php get_footer(); ?>

@@ -36,19 +36,34 @@ $j(document).ready(function() {
 		return false;
 	})
 
-	$j('.this_week').on('mouseenter', function(){
-		$j(this).parent().addClass('open')
-		$j(this).parent().find('ul').addClass('open')
-		$j(this).addClass('open')
+	function expandirMenu() {
+		$j(this).parent().addClass('open');
+		$j(this).parent().find('ul').addClass('open');
+		$j(this).addClass('open');
 		return false
-	})
-
-	$j('.this_week').on('mouseleave', function(){
+	}
+	function contraerMenu() {
 		$j(this).parent().removeClass('open')
 		$j(this).parent().find('ul').removeClass('open')
 		$j(this).removeClass('open')
 		return false
-	})
+	}
+
+	$j(".this_week").hoverIntent(expandirMenu,contraerMenu);
+
+	// $j('.this_week').on('mouseenter', function(){
+	// 	$j(this).parent().addClass('open')
+	// 	$j(this).parent().find('ul').addClass('open')
+	// 	$j(this).addClass('open')
+	// 	return false
+	// })
+
+	// $j('.this_week').on('mouseleave', function(){
+	// 	$j(this).parent().removeClass('open')
+	// 	$j(this).parent().find('ul').removeClass('open')
+	// 	$j(this).removeClass('open')
+	// 	return false
+	// })
 
 if (  $j('#single.category-entrevistas .meta').is(':visible') ) {
 

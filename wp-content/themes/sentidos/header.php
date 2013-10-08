@@ -42,6 +42,7 @@
 <?php wp_head(); ?>
 
 <script src="http://unslider.com/unslider.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/inc/js/jquery.hoverIntent.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/inc/js/functions.js" type="text/javascript"></script>
 
 </head>
@@ -78,6 +79,7 @@
 				?>
 					<li><a href="<?php the_permalink(); ?>" ><span>Nº<?php the_field('numero'); ?></span><strong><?php the_title(); ?></strong></a></li>
 				<?php endwhile; wp_reset_postdata(); endif; ?>
+					<li class="mas-ediciones"><a href="<?php bloginfo( 'wpurl' ) ?>/edicion"><span>&larr;</span><strong> Ver todas las ediciones</strong></a></li>
 			</ul>
 		</div>
 		<ul class="social">
