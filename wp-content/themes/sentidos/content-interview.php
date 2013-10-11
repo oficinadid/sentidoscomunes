@@ -12,7 +12,7 @@
 			</div>
 		</header>
 
-		<div class="meta">
+		<!--div class="meta">
 
 			<big>No dejes de leer:</big>
 			<ul>
@@ -44,7 +44,65 @@
 			</ul>
 
 			<small><?php edit_post_link(); ?></small>
-		</div>
+		</div-->
+
+		<section class="side">
+			<article class="comentarios">
+				<a href="#">
+					<span class="title">Comentarios</span>
+					<span class="count"><b>16</b></span>
+					<div class="cf"></div>
+				</a>
+			</article>
+			<article class="social">
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</article>
+			<article class="otros">
+				<h4>En esta edición SC</h4>
+
+				<div class="post">
+					<a href="#">
+						<div class="img">
+							<img src="http://placehold.it/240x160">
+						</div>
+						<div class="texto">
+							<span class="cat">Reportaje Gráfico</span>
+							<h3>Nombre de columna destacada Lorem Ipsum arma net dera tara lieos</h3>
+							<span class="autor">Por: David Salinas</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="post">
+					<a href="#">
+						<div class="img">
+							<img src="http://placehold.it/240x160">
+						</div>
+						<div class="texto">
+							<span class="cat">Infografía</span>
+							<h3>Nombre de columna destacada Lorem Ipsum arma net dera tara lieos</h3>
+							<span class="autor">Por: David Salinas</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="post">
+					<a href="#">
+						<div class="img">
+							<img src="http://placehold.it/240x160">
+						</div>
+						<div class="texto">
+							<span class="cat">Entrevista</span>
+							<h3>Nombre de columna destacada Lorem Ipsum arma net dera tara lieos</h3>
+							<span class="autor">Por: David Salinas</span>
+						</div>
+					</a>
+				</div>
+
+			</article>
+		</section>
 
 		<section class="content">
 			<div id="the_content">

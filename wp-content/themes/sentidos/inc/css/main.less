@@ -157,7 +157,7 @@
 		}
 	}
 	.this_week{
-		width:766px;
+		width:1085px;
 		&.open{
 			background:@cyan;
 			span {background:@cyan;
@@ -1138,6 +1138,106 @@ section.secondary big, #recent_comments big {width:auto;}
 			}
 			small{float:left;width:100%;text-align:center;font-size:1.5em;text-transform:uppercase;margin:10px 0; visibility:hidden; display:none;}
 		&.fixed {position:fixed; top:auto; right:auto; left:auto; z-index:auto;}
+		}
+		.side{
+			float:left;
+			padding:0;margin:0;
+			width:240px;
+			a {display:block;}
+			.comentarios {
+				border-bottom:1px solid #bbbdc0;
+				span {
+					display:block;
+					float:left;
+					height:16px;
+					padding:12px 0;
+					text-transform:uppercase;
+					text-align:center;
+					font-weight:500;
+					&.title {
+						width:160px;
+						background:#bbbdc0;
+						color:#fff;
+						font-size:12px;
+						height:16px;
+						padding:12px 0;
+					}
+					&.count {
+						width:80px;
+						color:#27a9e1;
+						font-size:18px;
+						height:21px;
+						padding:9px 0;
+						b {
+							font-weight:500;
+							padding:0 0 0 20px;
+							background:url(../img/icn_comments_mid.png) no-repeat left center;
+						}
+					} 
+				}
+			}
+			.social {
+				padding:12px 0 10px;
+				text-align:center;
+				.fb-like {
+					display:inline-block;
+					margin:0 10px;
+				}
+				a.twitter-share-button {
+					display:inline-block;
+					margin:0 10px;
+				}
+			}
+			.otros {
+				border-top:1px solid #bbbdc0;
+				h4 {
+					color:#27a9e1;
+					font-size:14px;
+					text-transform:uppercase;
+					margin:15px 0 10px;
+				}
+				.post {
+					position:relative;
+					width:240px;
+					height:160px;
+					.img {
+						position:absolute;
+						top:0; bottom:0; left:0; right:0;
+						img {
+							width:100%;
+							height:100%;
+						}
+					}
+					.texto {
+						background:rgba(0,0,0,0.6);
+						position:absolute;
+						top:0; bottom:0; left:0; right:0;
+						padding:18px;
+						color:#fff;
+						span {
+							display:block;
+							&.cat {
+								font-weight:bold;
+								font-size:10px;
+								margin:0 0 15px;
+								text-transform:uppercase;
+							}
+							&.autor {
+								font-size:12px;
+								font-family:'Vollkorn',serif;
+								font-style:italic;
+								letter-spacing:1px;
+							}
+						}
+						h3 {
+							font-weight:300;
+							font-size:16;
+							line-height:140%;
+							margin:0 0 15px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
