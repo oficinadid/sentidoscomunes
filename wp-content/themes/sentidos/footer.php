@@ -1,4 +1,17 @@
+<section class="siguenos">
+	<div class="content-siguenos">
+		<h3>Sigue a <strong>Sentidos Comunes</strong> en</h3>
+		<ul>
+			<li><a href="https://www.facebook.com/revistasentidoscomunes" target="_blank"><span class="fb"></span><p>Facebook</p></a></li>
+			<li><a href="https://twitter.com/sentidoscomunes" target="_blank"><span class="tw"></span><p>Twitter</p></a></li>
+			<li><a href="http://instagram.com/sentidoscomunes/" target="_blank"><span class="ins"></span><p>Instagram</p></a></li>
+		</ul>
+	</div>
+	
+</section>
+
 <footer class="full">
+
 	<div class="wrapper">
 		<section class="logo">
 			<big>Sentidos <strong>Comunes</strong></big>
