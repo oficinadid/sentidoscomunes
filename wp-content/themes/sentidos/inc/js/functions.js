@@ -23,7 +23,7 @@ $j(document).ready(function() {
 	};
 
 
-    $j('.search a').on('click', function(){
+    $j('.search-toggle a').on('click', function(){
 		$j('#search_form').toggleClass('hidden');
 		$j('body').toggleClass('searching');
 		$j(this).toggleClass('pressed');
@@ -51,19 +51,7 @@ $j(document).ready(function() {
 
 	$j(".this_week").hoverIntent(expandirMenu,contraerMenu);
 
-	// $j('.this_week').on('mouseenter', function(){
-	// 	$j(this).parent().addClass('open')
-	// 	$j(this).parent().find('ul').addClass('open')
-	// 	$j(this).addClass('open')
-	// 	return false
-	// })
-
-	// $j('.this_week').on('mouseleave', function(){
-	// 	$j(this).parent().removeClass('open')
-	// 	$j(this).parent().find('ul').removeClass('open')
-	// 	$j(this).removeClass('open')
-	// 	return false
-	// })
+	
 
 if (  $j('#single.category-entrevistas .meta').is(':visible') ) {
 

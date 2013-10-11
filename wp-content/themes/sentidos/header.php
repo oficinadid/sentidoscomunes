@@ -90,7 +90,7 @@
 		<div class="main_menu">
 			<?php wp_nav_menu(array('menu' => 'Main Menu' )); ?>
 		</div>
-		<div class="search"><a href="#search_form">Search</a></div>
+		<div class="search search-toggle"><a href="#search_form">Search</a></div>
 	</nav>
 </header>
 

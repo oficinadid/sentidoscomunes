@@ -2,3 +2,5 @@
 wp-content/themes/sentidos/inc/css/main.css
 
 wp-config.php
+
+wp-content/themes/sentidos/inc/js/functions.min.js
