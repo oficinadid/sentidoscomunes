@@ -50,7 +50,7 @@
 			<article class="comentarios">
 				<a href="#">
 					<span class="title">Comentarios</span>
-					<span class="count"><b>16</b></span>
+					<span class="count"><b><a href="<?php the_permalink(); ?>#disqus_thread" class="comments"></a></b></span>
 					<div class="cf"></div>
 				</a>
 			</article>
@@ -61,6 +61,16 @@
 			</article>
 			<article class="otros">
 				<h4>En esta edición SC</h4>
+
+				<?php get_posts(  array(
+					'numberposts'		=>	1,
+					'category'			=>	'entrevistas',
+					'orderby'			=>	'post_date',
+					'order'				=>	'DESC',
+					'exclude'			=>	get_the_ID(),
+					'no_found_rows'     => true
+					 )
+				) ?>
 
 				<div class="post">
 					<a href="#">
