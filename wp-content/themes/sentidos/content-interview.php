@@ -48,11 +48,11 @@
 
 		<section class="side">
 			<article class="comentarios">
-				<a href="#">
-					<span class="title">Comentarios</span>
-					<span class="count"><b><a href="<?php the_permalink(); ?>#disqus_thread" class="comments"></a></b></span>
-					<div class="cf"></div>
-				</a>
+
+				<span class="title">Comentarios</span>
+				<span class="count"><a href="<?php the_permalink(); ?>#disqus_thread" class="comments"></a></span>
+				<div class="cf"></div>
+
 			</article>
 			<article class="social">
 				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
