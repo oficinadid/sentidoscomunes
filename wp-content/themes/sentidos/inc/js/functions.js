@@ -127,8 +127,9 @@ if (  $j('#single.category-entrevistas .meta').is(':visible') ) {
 	    return false;
 	  });
 
-	$j('.single .side').stick_in_parent({
-		offset_top: 80
+	$j('.article-wrap .side').stick_in_parent({
+		parent: '.article-wrap',
+		offset_top: 82
 	});
 
 });
