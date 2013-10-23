@@ -43,6 +43,7 @@
 
 <script src="http://unslider.com/unslider.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/inc/js/jquery.hoverIntent.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/inc/js/jquery.sticky-kit.min.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/inc/js/functions.js" type="text/javascript"></script>
 
 </head>

@@ -62,54 +62,92 @@
 			<article class="otros">
 				<h4>En esta edición SC</h4>
 
-				<?php get_posts(  array(
-					'numberposts'		=>	1,
-					'category'			=>	'entrevistas',
-					'orderby'			=>	'post_date',
-					'order'				=>	'DESC',
-					'exclude'			=>	get_the_ID(),
-					'no_found_rows'     => true
-					 )
-				) ?>
+				<?php 
+					$edicion_entrevista = get_posts(  array(
+						'post_type' 		=> 'post',
+						'numberposts'		=>	1,
+						'category_name'		=>	'entrevistas',
+						'orderby'			=>	'post_date',
+						'order'				=>	'DESC',
+						'exclude'			=>	get_the_ID(),
+						'no_found_rows'     => true
+						 )
+					) ;
 
-				<div class="post">
-					<a href="#">
-						<div class="img">
-							<img src="http://placehold.it/240x160">
-						</div>
-						<div class="texto">
-							<span class="cat">Reportaje Gráfico</span>
-							<h3>Nombre de columna destacada Lorem Ipsum arma net dera tara lieos</h3>
-							<span class="autor">Por: David Salinas</span>
-						</div>
-					</a>
-				</div>
+					$edicion_infografia = get_posts(  array(
+						'post_type' 		=> 'post',
+						'numberposts'		=>	1,
+						'category_name'		=>	'infografias',
+						'orderby'			=>	'post_date',
+						'order'				=>	'DESC',
+						'exclude'			=>	get_the_ID(),
+						'no_found_rows'     => true
+						 )
+					) ;
 
-				<div class="post">
-					<a href="#">
-						<div class="img">
-							<img src="http://placehold.it/240x160">
-						</div>
-						<div class="texto">
-							<span class="cat">Infografía</span>
-							<h3>Nombre de columna destacada Lorem Ipsum arma net dera tara lieos</h3>
-							<span class="autor">Por: David Salinas</span>
-						</div>
-					</a>
-				</div>
+					$edicion_reportaje = get_posts(  array(
+						'post_type' 		=> 'post',
+						'numberposts'		=>	1,
+						'category_name'		=>	'reportajes-graficos',
+						'orderby'			=>	'post_date',
+						'order'				=>	'DESC',
+						'exclude'			=>	get_the_ID(),
+						'no_found_rows'     => true
+						 )
+					) ;
 
-				<div class="post">
-					<a href="#">
-						<div class="img">
-							<img src="http://placehold.it/240x160">
-						</div>
-						<div class="texto">
-							<span class="cat">Entrevista</span>
-							<h3>Nombre de columna destacada Lorem Ipsum arma net dera tara lieos</h3>
-							<span class="autor">Por: David Salinas</span>
-						</div>
-					</a>
-				</div>
+
+				?>
+				
+				<?php foreach ($edicion_entrevista as $entrevista): ?>
+					
+					<div class="post">
+						<a href="<?php echo get_permalink( $entrevista->ID ) ?>">
+							<div class="img">
+								<?php echo get_the_post_thumbnail( $entrevista->ID, '320x215' ) ?>
+							</div>
+							<div class="texto">
+								<span class="cat">Entrevista</span>
+								<h3><?php echo get_the_title( $entrevista->ID ) ?></h3>
+								<span class="autor">Por: <?php echo get_the_author_meta( 'display_name', $entrevista->post_author ) ?></span>
+							</div>
+						</a>
+					</div>
+				<?php endforeach ?>
+
+				<?php foreach ($edicion_infografia as $infografia): ?>
+					
+					<div class="post">
+						<a href="<?php echo get_permalink( $infografia->ID ) ?>">
+							<div class="img">
+								<?php echo get_the_post_thumbnail( $infografia->ID, '320x215' ) ?>
+							</div>
+							<div class="texto">
+								<span class="cat">Infografia</span>
+								<h3><?php echo get_the_title( $infografia->ID ) ?></h3>
+								<span class="autor">Por: <?php echo get_the_author_meta( 'display_name', $infografia->post_author ) ?></span>
+							</div>
+						</a>
+					</div>
+				<?php endforeach ?>
+
+				<?php foreach ($edicion_reportaje as $reportaje): ?>
+					
+					<div class="post">
+						<a href="<?php echo get_permalink( $reportaje->ID ) ?>">
+							<div class="img">
+								<?php echo get_the_post_thumbnail( $reportaje->ID, '320x215' ) ?>
+							</div>
+							<div class="texto">
+								<span class="cat">Reportaje Gráfico</span>
+								<h3><?php echo get_the_title( $reportaje->ID ) ?></h3>
+								<span class="autor">Por: <?php echo get_the_author_meta( 'display_name', $reportaje->post_author ) ?></span>
+							</div>
+						</a>
+					</div>
+				<?php endforeach ?>
+
+				
 
 			</article>
 		</section>
