@@ -6,10 +6,346 @@
 		display:none;
 	}
 	#search_form form {
-		width:960px;
+		width:960px !important;
 	}
 	#search_form #s{
-		width: 790px;
+		width: 790px !important;
+	}
+	#single #content .content{
+		width:640px;
+	}
+	#single #content header .titles{
+		width:640px;
+	}
+	#single #content header .titles .title{
+		width:100%;
+	}
+	#single #content .content #the_content{
+		padding:0 20px 20px 0;
+	}
+	#via-publica #the_content .con_left{
+		width:640px;
+	}
+	#via-publica #the_content .con_right{
+		width:320px;
+		padding:0 0 0 40px;
+	}
+	#via-publica #the_content.center{
+		padding:0;
+	}
+	#single .category-entrevistas .content{
+		width:960px!important;
+		border-left:none !important;
+	}
+	#single .category-entrevistas #the_content h1{
+		margin: 0px 0 40px 40px!important;
+	}
+	#single .category-entrevistas #comments,
+	#single .category-entrevistas #the_content h2,
+	#single .category-entrevistas #the_content h3,
+	#single .category-entrevistas #the_content h5,
+	#single .category-entrevistas #the_content p{
+		margin: 0px 0 20px 40px !important;
+	}
+	.edition .size2{
+		width:480px!important;
+	}
+	.edition .size2 img{
+		width: auto!important;
+		height:auto!important;
+	}
+	#single .category-entrevistas #the_content h5{
+		width:35%!important;
+	}
+	#single .category-entrevistas #the_content div.alignnone{
+		max-width:680px!important;
+		margin: 0px 0 20px 40px!important;
+	}
+	#single .category-entrevistas #the_content img.alignnone{
+		max-width:680px!important;
+		margin: 0px 0 20px 0!important;
+	}
+	#reportaje #gallery img{
+		width:960px!important;
+	}
+	#home_main .secondary article .readmore {
+		width:285px;
+	}
+	#home_main .sidebar {
+		padding:0;
+	}
+	
+	#home_main .secondary {
+		padding:30px 0;
+	}
+	#home_main .main article:last-child {
+		margin:0; padding:0 0 10px;
+		.full {
+			border:none;
+		}
+	}
+	.meta {display:none; visibility:hidden;}
+	.edition .meta {display:block; visibility:visible;}
+	.side {display:none; visibility:hidden;}
+	.menu.full .this_week{width:766px !important;}
+	.menu.full .this_week .current{background:url('../img/sprite_menu.png') 860px -168px no-repeat;}
+
+	.main_menu a{font-size:.9em;padding:13px 5px 14px;}
+
+	.mafi {
+		iframe {
+			width:620px !important;
+		}
+	}
+	.siguenos .content-siguenos {
+		width:960px !important;
+		h3 {
+			width:250px;
+			text-align:left;
+			padding:20px 0 0 !important;
+		}
+		ul {
+			li {
+				margin:15px 35px 0 0 !important;
+				&:last-child {
+					margin:15px 0 0 !important;
+				}
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPhone Portrait - *//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-device-width:640px) and (orientation:portrait)  {
+	body {
+		width:320px;
+	}
+	header {
+		display:none;
+	}
+	.wrapper {
+		width:320px;
+	}
+	h2.logo_big {
+		background-size:300px;
+	}
+	section.edition {
+		article {
+			width:320px;
+			&.size4 {
+				width:320px;
+			}
+			&.size3 {
+				width:320px;
+				height:250px;
+			}
+			&.size2 {
+				width:320px !important;
+				height:350px;
+				img {
+					height:100% !important;
+				}
+			}
+			&.size1 {
+				width:320px;
+			}
+			.img {
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPhone Landscape - */////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (max-device-width:960px) and (orientation:landscape) {
+
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPad Portrait - *////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+	.wrapper{
+		width:760px !important;
+	}
+	.menu.full .this_week{width:566px !important;}
+	.menu.full .this_week .current{background:url('../img/sprite_menu.png') 860px -168px no-repeat;}
+	.menu.full .main_menu {width:648px !important;}
+
+	.main_menu a{font-size:.9em;padding:13px 5px 14px;}
+
+	footer.full {
+		width:768px;
+		.wrapper {
+			padding:40px 20px 20px !important;
+		}
+		nav {
+			float:left !important;
+			width:730px !important;
+		}
+		h5 {
+			float:left !important;
+			width:730px !important;
+		}
+	}
+
+	#search_form form {
+		width:760px !important;
+	}
+	#search_form #s{
+		width: 590px !important;
+	}
+	#single #content .content{
+		width:760px !important;
+	}
+	#single #content header .titles{
+		width:640px;
+	}
+	#single #content header .titles .title{
+		width:100%;
+	}
+	#single #content .content #the_content{
+		padding:0 20px 20px 0;
+	}
+	#via-publica #the_content .con_left{
+		width:640px;
+	}
+	#via-publica #the_content .con_right{
+		width:320px;
+		padding:0 0 0 40px;
+	}
+	#via-publica #the_content.center{
+		padding:0;
+	}
+	#single .category-entrevistas .content{
+		width:960px!important;
+		border-left:none !important;
+	}
+	#single .category-entrevistas #the_content h1{
+		margin: 0px 0 40px 40px!important;
+	}
+	#single .category-entrevistas #comments,
+	#single .category-entrevistas #the_content h2,
+	#single .category-entrevistas #the_content h3,
+	#single .category-entrevistas #the_content h5,
+	#single .category-entrevistas #the_content p{
+		margin: 0px 30px 20px !important;
+	}
+	.edition .size2{
+		width:480px!important;
+	}
+	.edition .size2 img{
+		width: auto!important;
+		height:auto!important;
+	}
+	#single .category-entrevistas header .titles h1.title {
+		padding:0 20px !important;
+		width:700px !important;
+	}
+	#single .category-entrevistas #the_content h5{
+		width:35%!important;
+	}
+	#single .category-entrevistas #the_content div.alignnone{
+		max-width:680px!important;
+		margin: 0px 0 20px 40px!important;
+	}
+	#single .category-entrevistas #the_content img.alignnone{
+		max-width:680px!important;
+		margin: 0px 0 20px 0!important;
+	}
+	#reportaje #gallery img{
+		width:960px!important;
+	}
+	#home_main .secondary article .readmore {
+		width:285px;
+	}
+	#home_main .sidebar {
+		padding:0;
+	}
+	
+	#home_main .secondary {
+		padding:30px 0;
+	}
+	#home_main .main article:last-child {
+		margin:0; padding:0 0 10px;
+		.full {
+			border:none;
+		}
+	}
+	.meta {display:none; visibility:hidden;}
+	.edition .meta {display:block; visibility:visible;}
+	.side {display:none; visibility:hidden;}
+
+	.mafi {
+		iframe {
+			width:620px !important;
+		}
+	}
+	.double.lists{
+		display:none;
+	}
+	.siguenos .content-siguenos {
+		width:760px !important;
+		h3 {
+			width:250px;
+			text-align:left;
+			padding:20px 0 0 !important;
+			font-weight:300 !important;
+			margin:0 0 10px 20px !important;
+			font-size:2.5em !important;
+			strong {
+				font-weight:500 !important;
+			}
+		}
+		ul {
+			padding:0 0 0 10px !important;
+			width:480px !important;
+			li {
+				margin:15px 15px 0 0 !important;
+				a {
+					width:145px !important;
+					span {
+						width:40px !important;
+					}
+					p {
+						padding:3px 0 3px 55px !important;
+					}
+				}
+				&:last-child {
+					margin:15px 0 0 !important;
+				}
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPad Landscape - *///////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
+	.wrapper{
+		width:960px;
+	}  
+	.double.lists{
+		display:none;
+	}
+	#search_form form {
+		width:960px !important;
+	}
+	#search_form #s{
+		width: 790px !important;
 	}
 	#single #content .content{
 		width:640px;
@@ -91,63 +427,31 @@
 	.menu.full .this_week .current{background:url('../img/sprite_menu.png') 860px -168px no-repeat;}
 
 	.main_menu a{font-size:.9em;padding:13px 5px 14px;}
-}
 
-/* - iPhone Portrait - */
-@media only screen and (max-device-width:640px) and (orientation:portrait)  {
-	body {
-		width:320px;
+	.mafi {
+		iframe {
+			width:620px !important;
+		}
 	}
-	header {
-		display:none;
-	}
-	.wrapper {
-		width:320px;
-	}
-	h2.logo_big {
-		background-size:300px;
-	}
-	section.edition {
-		article {
-			width:320px;
-			&.size4 {
-				width:320px;
+	.siguenos .content-siguenos {
+		width:960px !important;
+		h3 {
+			width:250px;
+			text-align:left;
+			padding:20px 0 0 !important;
+			font-weight:300 !important;
+			font-size:2.8em !important;
+			strong {
+				font-weight:500 !important;
 			}
-			&.size3 {
-				width:320px;
-				height:250px;
-			}
-			&.size2 {
-				width:320px !important;
-				height:350px;
-				img {
-					height:100% !important;
-				}
-			}
-			&.size1 {
-				width:320px;
-			}
-			.img {
-				img {
-					width:100%;
-					height:auto;
+		}
+		ul {
+			li {
+				margin:15px 35px 0 0 !important;
+				&:last-child {
+					margin:15px 0 0 !important;
 				}
 			}
 		}
 	}
-}
-
-/* - iPhone Landscape - */
-@media only screen and (max-device-width:960px) and (orientation:landscape) {
-
-}
-
-/* - iPad Portrait - */
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
-
-}
-
-/* - iPad Landscape - */
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
-
 }
