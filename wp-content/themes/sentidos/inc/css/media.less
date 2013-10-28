@@ -92,3 +92,62 @@
 
 	.main_menu a{font-size:.9em;padding:13px 5px 14px;}
 }
+
+/* - iPhone Portrait - */
+@media only screen and (max-device-width:640px) and (orientation:portrait)  {
+	body {
+		width:320px;
+	}
+	header {
+		display:none;
+	}
+	.wrapper {
+		width:320px;
+	}
+	h2.logo_big {
+		background-size:300px;
+	}
+	section.edition {
+		article {
+			width:320px;
+			&.size4 {
+				width:320px;
+			}
+			&.size3 {
+				width:320px;
+				height:250px;
+			}
+			&.size2 {
+				width:320px !important;
+				height:350px;
+				img {
+					height:100% !important;
+				}
+			}
+			&.size1 {
+				width:320px;
+			}
+			.img {
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+	}
+}
+
+/* - iPhone Landscape - */
+@media only screen and (max-device-width:960px) and (orientation:landscape) {
+
+}
+
+/* - iPad Portrait - */
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+
+}
+
+/* - iPad Landscape - */
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
+
+}
