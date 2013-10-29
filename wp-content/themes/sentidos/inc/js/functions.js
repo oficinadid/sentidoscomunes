@@ -132,4 +132,10 @@ if (  $j('#single.category-entrevistas .meta').is(':visible') ) {
 		offset_top: 82
 	});
 
+	$j('.menu.mobile .menu-main-menu-container').hide();
+
+	$j('.menu.mobile a.trigger').click(function(){
+		$j('.menu.mobile .menu-main-menu-container').fadeToggle('fast');
+	});
+
 });

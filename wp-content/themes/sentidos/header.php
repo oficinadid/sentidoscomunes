@@ -49,51 +49,83 @@
 </head>
 
 <body <?php body_class(); ?> >
-<header class="menu full">
-	<nav class="wrapper">
-		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="this_week">
-			<?php
-				$args = array(
-					'post_type' => 'edicion',
-					'posts_per_page' => 1
-				);
-				$featured = new WP_Query($args);
-				if($featured->have_posts()) : while($featured->have_posts()): $featured->the_post(); 
 
-			?>
-				<a href="<?php the_permalink(); ?>" class="current">
-					<span>Nº<?php the_field('numero'); ?></span>
-					<strong><?php the_title(); ?></strong>
-				</a>
-			<?php endwhile; wp_reset_postdata(); endif; ?>
-			<!--a href="#" class="past">Boton Semanas Anteriores</a--> 
-			<ul>
+<?php if (wpmd_is_device()): ?>
+<!-- MOBILE NAV DROPDOWN -->
+	<header class="menu mobile">
+		<nav class="wrapper">
+
+            <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+			<div class="main-menu-mobile">
+				<a class="trigger"><span>Menu</span></a>
+				<div class="main_menu">
+					<?php wp_nav_menu(array('menu' => 'Main Menu' )); ?>
+				</div>
+			</div>
+			
+			<div class="search search-toggle"><a href="#search_form">Search</a></div>
+
+			<ul class="social">
+				<li class="facebook"><a href="https://www.facebook.com/pages/Sentidos-Comunes/162551567123399" title="Únete a nuestro Fan Page en Facebook">Facebook</a></li>
+
+				<li class="twitter"><a href="https://twitter.com/sentidoscomunes" title="Siguenos en Twitter">Twitter</a></li>
+				<li class="instagram"><a href="https://instagram.com/sentidoscomunes">Instagram</a></li>
+			</ul>
+
+		</nav>
+	</header>
+
+<?php else: ?>
+<!-- DESKTOP NAV -->
+	<header class="menu full">
+		<nav class="wrapper">
+            
+            <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="this_week">
 				<?php
 					$args = array(
 						'post_type' => 'edicion',
-						'posts_per_page' => 5,
-						'offset' => 1
+						'posts_per_page' => 1
 					);
 					$featured = new WP_Query($args);
 					if($featured->have_posts()) : while($featured->have_posts()): $featured->the_post(); 
-				?>
-					<li><a href="<?php the_permalink(); ?>" ><span>Nº<?php the_field('numero'); ?></span><strong><?php the_title(); ?></strong></a></li>
-				<?php endwhile; wp_reset_postdata(); endif; ?>
-					<li class="mas-ediciones"><a href="<?php bloginfo( 'wpurl' ) ?>/edicion"><span>&larr;</span><strong> Ver todas las ediciones</strong></a></li>
-			</ul>
-		</div>
-		<ul class="social">
-			<li class="facebook"><a href="https://www.facebook.com/pages/Sentidos-Comunes/162551567123399" title="Únete a nuestro Fan Page en Facebook">Facebook</a></li>
 
-			<li class="twitter"><a href="https://twitter.com/sentidoscomunes" title="Siguenos en Twitter">Twitter</a></li>			<li class="instagram"><a href="https://instagram.com/sentidoscomunes">Instagram</a></li>
-		</ul>
-		<div class="main_menu">
-			<?php wp_nav_menu(array('menu' => 'Main Menu' )); ?>
-		</div>
-		<div class="search search-toggle"><a href="#search_form">Search</a></div>
-	</nav>
-</header>
+				?>
+					<a href="<?php the_permalink(); ?>" class="current">
+						<span>Nº<?php the_field('numero'); ?></span>
+						<strong><?php the_title(); ?></strong>
+					</a>
+				<?php endwhile; wp_reset_postdata(); endif; ?>
+				<!--a href="#" class="past">Boton Semanas Anteriores</a--> 
+				<ul>
+					<?php
+						$args = array(
+							'post_type' => 'edicion',
+							'posts_per_page' => 5,
+							'offset' => 1
+						);
+						$featured = new WP_Query($args);
+						if($featured->have_posts()) : while($featured->have_posts()): $featured->the_post(); 
+					?>
+						<li><a href="<?php the_permalink(); ?>" ><span>Nº<?php the_field('numero'); ?></span><strong><?php the_title(); ?></strong></a></li>
+					<?php endwhile; wp_reset_postdata(); endif; ?>
+						<li class="mas-ediciones"><a href="<?php bloginfo( 'wpurl' ) ?>/edicion"><span>&larr;</span><strong> Ver todas las ediciones</strong></a></li>
+				</ul>
+			</div>
+			<ul class="social">
+				<li class="facebook"><a href="https://www.facebook.com/pages/Sentidos-Comunes/162551567123399" title="Únete a nuestro Fan Page en Facebook">Facebook</a></li>
+
+				<li class="twitter"><a href="https://twitter.com/sentidoscomunes" title="Siguenos en Twitter">Twitter</a></li>			<li class="instagram"><a href="https://instagram.com/sentidoscomunes">Instagram</a></li>
+			</ul>
+			<div class="main_menu">
+				<?php wp_nav_menu(array('menu' => 'Main Menu' )); ?>
+			</div>
+			<div class="search search-toggle"><a href="#search_form">Search</a></div>
+		</nav>
+	</header>
+
+<?php endif ?>
 
 	<div id="search_form" class="wrapper hidden">
 		<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
