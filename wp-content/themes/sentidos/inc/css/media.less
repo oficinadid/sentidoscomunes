@@ -1,16 +1,19 @@
 @media all and (max-width: 1280px) {
 	.wrapper{
 		width:960px;
-	}  
+	}
+
 	.double.lists{
 		display:none;
 	}
+
 	#search_form form {
 		width:960px !important;
 	}
 	#search_form #s{
 		width: 790px !important;
 	}
+
 	#single #content .content{
 		width:640px;
 	}
@@ -87,10 +90,6 @@
 	.meta {display:none; visibility:hidden;}
 	.edition .meta {display:block; visibility:visible;}
 	.side {display:none; visibility:hidden;}
-	.menu.full .this_week{width:766px !important;}
-	.menu.full .this_week .current{background:url('../img/sprite_menu.png') 860px -168px no-repeat;}
-
-	.main_menu a{font-size:.9em;padding:13px 5px 14px;}
 
 	.mafi {
 		iframe {
@@ -116,66 +115,13 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* - iPhone Portrait - *//////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@media only screen and (max-device-width:640px) and (orientation:portrait)  {
-	body {
-		width:320px;
-	}
-	header {
-		display:none;
-	}
-	.wrapper {
-		width:320px;
-	}
-	h2.logo_big {
-		background-size:300px;
-	}
-	section.edition {
-		article {
-			width:320px;
-			&.size4 {
-				width:320px;
-			}
-			&.size3 {
-				width:320px;
-				height:250px;
-			}
-			&.size2 {
-				width:320px !important;
-				height:350px;
-				img {
-					height:100% !important;
-				}
-			}
-			&.size1 {
-				width:320px;
-			}
-			.img {
-				img {
-					width:100%;
-					height:auto;
-				}
-			}
-		}
-	}
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* - iPhone Landscape - */////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@media only screen and (max-device-width:960px) and (orientation:landscape) {
-
-
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* - iPad Portrait - *////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
 	.wrapper{
 		width:768px !important;
 	}
@@ -501,7 +447,10 @@
 /* - iPad Landscape - *///////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape) {
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
 	.wrapper{
 		width:1024px;
 	}
@@ -655,6 +604,21 @@
 		}
 	}
 
+	footer.full {
+		width:1024px;
+		.wrapper {
+			padding:10px 20px 20px !important;
+		}
+		nav {
+			float:left !important;
+			width:730px !important;
+		}
+		h5 {
+			float:left !important;
+			width:730px !important;
+		}
+	}
+
 	section.edition {
 		padding:0 32px;
 	}
@@ -671,8 +635,11 @@
 	.double.lists{
 		display:none;
 	}
+	.single ul.wrapper.nav_bar {
+		width:1004px !important;
+		margin:0 10px 5px;
+	} 
 	#single #content .content{
-		width:640px;
 	}
 	#single #content header .titles{
 		width:640px;
@@ -682,6 +649,7 @@
 	}
 	#single #content .content #the_content{
 		padding:0 20px 20px 0;
+		width:860px;
 	}
 	#via-publica #the_content .con_left{
 		width:640px;
@@ -706,6 +674,9 @@
 	#single .category-entrevistas #the_content h5,
 	#single .category-entrevistas #the_content p{
 		margin: 0px 0 20px 40px!important;
+	}
+	#single #content .content #comments {
+		width:860px !important;
 	}
 	.edition {
 		article {
@@ -764,25 +735,718 @@
 			width:620px !important;
 		}
 	}
-	.siguenos .content-siguenos {
-		width:960px !important;
-		h3 {
-			width:250px;
-			text-align:left;
-			padding:20px 0 0 !important;
-			font-weight:300 !important;
-			font-size:2.8em !important;
-			strong {
-				font-weight:500 !important;
+	.siguenos {
+		width:1024px;
+		.content-siguenos {
+			width:960px !important;
+			h3 {
+				width:250px;
+				text-align:left;
+				padding:20px 0 0 !important;
+				font-weight:300 !important;
+				font-size:2.8em !important;
+				strong {
+					font-weight:500 !important;
+				}
 			}
-		}
-		ul {
-			li {
-				margin:15px 35px 0 0 !important;
-				&:last-child {
-					margin:15px 0 0 !important;
+			ul {
+				li {
+					margin:15px 35px 0 0 !important;
+					&:last-child {
+						margin:15px 0 0 !important;
+					}
 				}
 			}
 		}
 	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPhone Portrait - *//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {
+	body {
+		width:320px;
+	}
+	.wrapper {
+		width:320px;
+	}
+
+	.menu.mobile{
+		.fixed;
+		
+	  	background:@grey_dark;
+		ul{ list-style:none; }
+		.wrapper{height:40px;}
+		h1{
+			position:absolute;left:0;top:0;
+			margin:0;
+			a{
+				.hidde_text;
+				background:url('../img/square_sc.png') left center no-repeat black;
+				border-bottom:4px solid @cyan;
+				height:45px;width:50px;
+				background-size:100%;
+			}
+		}
+
+		.main-menu-mobile {
+			margin:0 0 0 50px;
+			position:relative;
+			width:105px;
+			float:left;
+			z-index:9999;
+			a.trigger {
+				display:block;
+				width:105px;
+				height:40px;
+				font-size:1.3em;
+				color:#fff;
+				text-transform:uppercase;
+				padding:9px 12px;
+				span {
+					background:url('../img/sprite_menu.png') 0 -176px no-repeat;
+					display:inline-block;
+					padding:2px 0 2px 25px;
+				}
+			}
+			.menu-main-menu-container {
+			position:absolute;
+			top:40px;
+			left:0;
+			width:229px;
+			display:none;
+				ul {
+					background:@grey_dark;
+					width:100%;
+					margin:0;
+					padding:0 0 5px;
+					li {
+						width:100%;
+						float:none;
+						display:block;
+						clear:both;
+						a {
+							padding:15px 10px 15px 10px;
+							margin:0 20px 0 10px;
+							display:block;
+							width:199px;
+							text-transform:uppercase;
+							color:#fff;
+							font-size:1.2em;
+							border-top:1px solid #555;
+						}
+					}
+				}
+			}
+		}
+
+		.social{
+			background:#303132;
+			float:right;
+			margin:0;padding:0;
+			border-left:1px solid #58585b;
+			li {float:left;}
+			a{
+				.left;
+				.hidde_text;
+				background:url('../img/sprite_menu.png') left top no-repeat;
+				height:40px;width:41px;
+				border-right:1px solid #58585b;
+			}		
+			.twitter a 	{
+				background-position:-288px -335px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -288px -335px no-repeat  #1ab7ea;
+				}
+			}
+			.facebook a {
+				background-position:-284px -448px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -284px -448px no-repeat  #3b5999;
+				}
+			}
+			.google a {
+				background-position:-286px -392px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -286px -392px no-repeat  #27a9e1;
+				}
+			}
+			.instagram a {
+				background-position:-288px -496px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -288px -496px no-repeat  #f7b21e;
+				}
+			}
+		}
+		.search {
+			float:right;
+			a {
+				height:40px;width:41px;
+				background:url('../img/sprite_menu.png') left top no-repeat #27a9e1;
+				background-position:12px -111px;
+				.hidde_text;
+				&.pressed {
+					background:url('../img/sprite_menu.png') 12px -111px no-repeat #27a9e1;
+				}
+				&:hover {
+					background:url('../img/sprite_menu.png') 12px -111px no-repeat @blue;
+				}
+			}
+		}
+	}
+
+	h2.logo_big {
+		background-size:300px;
+		margin:0 0 40px 0;
+		padding:0;
+	}
+	section.edition {
+		article {
+			width:320px;
+			&.size4 {
+				width:320px;
+			}
+			&.size3 {
+				width:320px;
+				height:250px;
+			}
+			&.size2 {
+				width:320px !important;
+				height:350px;
+				img {
+					height:100% !important;
+				}
+			}
+			&.size1 {
+				width:320px;
+			}
+			.img {
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+	}
+	#home_main {
+		.main {
+			border-right:none;
+			width:320px;
+			big {
+				width:300px;
+				margin:0 10px 20px;
+			}
+			article {
+				width:320px;
+				img {
+					max-width:100% !important;
+					height:auto;
+				}
+				h3 {
+					float:none;
+					width:300px;
+					padding:0 10px;
+				}
+				p {
+					width:300px;
+					margin:15px 10px 0;
+				}
+				.full {
+					width:300px;
+					padding:0 10px 10px;
+				}
+			}
+		}
+		.secondary {
+			border-right:none;
+			border-top:1px solid #aaa;
+		}
+		#main-primary {
+			a.banner {
+				display:none;
+				visibility:hidden;
+			}
+			a.banner-nottp {
+				display:none;
+				visibility:hidden;				
+			}
+			#recent_comments {
+				display:none;
+				visibility:hidden;	
+			}
+		}
+		.mafi {
+			display:none;
+			visibility:hidden;
+			width:320px;
+			iframe {
+				width:320px !important;
+			}
+		}
+	}
+	.siguenos {
+		padding:20px 0;
+		height:380px;
+		.content-siguenos {
+			width:320px !important;
+			height:auto;
+			h3 {
+				width:280px;
+				padding:0 !important;
+				margin:0 20px;
+				float:none;
+				font-weight:300;
+				strong {
+					font-weight:500;
+				}
+			}
+			ul {
+				width:280px;
+				margin:0 20px;
+				float:none;
+				padding:0;
+				li {
+					float:none;
+					margin:0 auto;
+					a {
+						width:280px;
+						padding:0 0 25px 15px;
+						margin:20px auto 0;
+					}
+				}
+			}
+		}
+	}
+	footer.full {
+		width:320px;
+		padding:20px 0;
+		.wrapper {
+			width:280px;
+			margin:0 20px;
+		}
+		section.logo {
+			width:280px;
+			big {
+				font-size:2.2em;
+				font-weight:300;
+				strong {
+					font-weight:700;
+				}
+			}
+		}
+		nav {
+			width:280px;
+			float:none;
+			ul {
+				margin:0 0 20px;
+				line-height:1.8em;
+				li {
+					h4 {
+						font-size:1.4em;
+					}
+					a {
+						font-size:1.2em;
+					}
+				}
+			}
+		}
+		h5 {
+			clear:both;
+			width:280px;
+			float:none;
+			a {
+				line-height:140%;
+				&.img {
+					float:none;
+					display:block;
+				}
+			}
+		}
+	}
+	.archive {
+		ul.wrapper.nav_bar {
+			width:300px;
+			margin:0 5px 5px;
+		}
+	}
+	.single {
+		ul.wrapper.nav_bar {
+			width:300px;
+			margin:0 10px 5px;
+		}
+	}
+	#single #content header .titles {
+		padding:0 15px;
+		h1 {
+			font-size:2.2em !important;
+		}
+	}
+	#single .category-entrevistas .content {
+		width:320px !important;
+		#the_content {
+			margin:40px 10px 20px !important;
+			h3 {
+				margin:0 0 20px !important;
+				font-size:1.6em !important;
+			}
+			p {
+				margin:0 0 20px !important;
+				font-size:1.3em !important;
+			}
+		}
+		#comments {
+			margin:0 20px !important;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPhone Landscape - */////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) {
+
+	body {
+		width:480px;
+	}
+	.wrapper {
+		width:480px;
+	}
+
+	.menu.mobile{
+		.fixed;
+		
+	  	background:@grey_dark;
+		ul{ list-style:none; }
+		.wrapper{height:40px;}
+		h1{
+			position:absolute;left:0;top:0;
+			margin:0;
+			a{
+				.hidde_text;
+				background:url('../img/square_sc.png') left center no-repeat black;
+				border-bottom:4px solid @cyan;
+				height:45px;width:50px;
+				background-size:100%;
+			}
+		}
+
+		.main-menu-mobile {
+			margin:0 0 0 50px;
+			position:relative;
+			width:265px;
+			float:left;
+			z-index:9999;
+			a.trigger {
+				display:block;
+				width:265px;
+				height:40px;
+				font-size:1.3em;
+				color:#fff;
+				text-transform:uppercase;
+				padding:9px 12px;
+				span {
+					background:url('../img/sprite_menu.png') 0 -176px no-repeat;
+					display:inline-block;
+					padding:2px 0 2px 25px;
+				}
+			}
+			.menu-main-menu-container {
+			position:absolute;
+			top:40px;
+			left:0;
+			width:265px;
+			display:none;
+				ul {
+					background:@grey_dark;
+					width:100%;
+					margin:0;
+					padding:0 0 5px;
+					li {
+						width:100%;
+						float:none;
+						display:block;
+						clear:both;
+						a {
+							padding:15px 10px 15px 10px;
+							margin:0 20px 0 10px;
+							display:block;
+							text-transform:uppercase;
+							color:#fff;
+							font-size:1.2em;
+							border-top:1px solid #555;
+						}
+					}
+				}
+			}
+		}
+
+		.social{
+			background:#303132;
+			float:right;
+			margin:0;padding:0;
+			border-left:1px solid #58585b;
+			li {float:left;}
+			a{
+				.left;
+				.hidde_text;
+				background:url('../img/sprite_menu.png') left top no-repeat;
+				height:40px;width:41px;
+				border-right:1px solid #58585b;
+			}		
+			.twitter a 	{
+				background-position:-288px -335px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -288px -335px no-repeat  #1ab7ea;
+				}
+			}
+			.facebook a {
+				background-position:-284px -448px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -284px -448px no-repeat  #3b5999;
+				}
+			}
+			.google a {
+				background-position:-286px -392px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -286px -392px no-repeat  #27a9e1;
+				}
+			}
+			.instagram a {
+				background-position:-288px -496px;
+				&:hover {
+					background:url('../img/sprite_menu.png') -288px -496px no-repeat  #f7b21e;
+				}
+			}
+		}
+		.search {
+			float:right;
+			a {
+				height:40px;width:41px;
+				background:url('../img/sprite_menu.png') left top no-repeat #27a9e1;
+				background-position:12px -111px;
+				.hidde_text;
+				&.pressed {
+					background:url('../img/sprite_menu.png') 12px -111px no-repeat #27a9e1;
+				}
+				&:hover {
+					background:url('../img/sprite_menu.png') 12px -111px no-repeat @blue;
+				}
+			}
+		}
+	}
+
+	h2.logo_big {
+		background-size:300px;
+		margin:0 0 40px 0;
+		padding:0;
+	}
+
+	section.edition {
+		article {
+			&.size4 {
+				width:480px;
+				height:320px;
+				.meta {
+					width:240px;
+				}
+			}
+			&.size3 {
+				width:240px;
+				height:160px;
+			}
+			&.size2 {
+				width:240px !important;
+				height:160px;
+				img {
+					height:100% !important;
+				}
+			}
+			&.size1 {
+				width:240px;
+				height:160px;
+			}
+			.img {
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+			.meta {
+				background: rgba(0,0,0,0.7);
+				h3 {
+					font-size:1.3em;
+					font-weight:700;
+				}
+				h4 {
+					margin:6px 12px;
+				}
+			}
+		}
+	}
+	#home_main {
+		.main {
+			width:480px;
+			border-right:none;
+			big {
+				width:460px;
+				margin:0 10px 20px;
+			}
+			article {
+				width:480px;
+				margin:0 0 10px;
+				padding:0 0 10px;
+				img {
+					max-width:100% !important;
+					height:auto;
+				}
+				h3 {
+					float:left;
+					width:195px;
+					padding:0 20px 0 10px;
+					font-size:2.2em;
+				}
+				p {
+					width:245px;
+					margin:3px 10px 0 0;
+					font-size:1.2em;
+				}
+				.full {
+					width:480px;
+					padding:0 10px 15px;
+					margin:25px 0 0;
+				}
+			}
+		}
+		.secondary {
+			border-right:none;
+			border-top:1px solid #aaa;
+			width:480px;
+			article {
+				padding:10px;
+				.readmore {
+					width:445px;
+				}
+			}
+		}
+		.sidebar {
+			float:none;
+			width:480px;
+			.newsletter {
+				width:480px;
+				form {
+					width:400px;
+					margin:10px 20px 0;
+					.medium {
+						width:400px;
+					}
+				}
+			}
+		}
+		#main-primary {
+			a.banner {
+				display:none;
+				visibility:hidden;
+			}
+			a.banner-nottp {
+				display:none;
+				visibility:hidden;				
+			}
+			#recent_comments {
+				display:none;
+				visibility:hidden;	
+			}
+		}
+		.mafi {
+			display:none;
+			visibility:hidden;
+			width:320px;
+			iframe {
+				width:320px !important;
+			}
+		}
+	}
+	.siguenos {
+		width:480px;
+		padding:15px 0;
+		height:auto;
+		.content-siguenos {
+			width:440px !important;
+			height:auto;
+			h3 {
+				width:100%;
+				font-weight:300;
+				font-size:2.8em;
+				strong {
+					font-weight:500;
+				}
+			}
+			ul {
+				with:430px;
+				padding:0;
+				float:none;
+				li {
+					margin:15px 0 0 !important;
+					a {
+						width:430px;
+						margin:0 0 10px;
+					}
+				}
+			}
+		}
+	}
+	footer.full {
+		width:480px;
+		padding:40px 0 20px;
+		.wrapper {
+			padding:0;
+			width:440px;
+		}
+		.logo {
+			big {
+				font-weight:300;
+				strong {
+					font-weight:500;
+				}
+			}
+		}
+		nav {
+			width:420px;
+			float:none;
+			margin:0;
+			ul {
+				float:none;
+				margin:0 0 20px;
+			}
+		}
+		h5 {
+			float:none;
+			width:440px;
+			margin:40px auto 0;
+			a.img {
+				display:block;
+				clear:both;
+				float:none;
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* - iPhone 5 Landscape - */////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+
 }
