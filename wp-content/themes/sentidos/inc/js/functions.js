@@ -3,19 +3,6 @@ var $j = jQuery.noConflict();
 
 $j(document).ready(function() {
 
-	$j(function() {
-	    var unslider = $j('.slider').unslider({
-	    	speed: 800,
-	    	delay: 10000,
-			dots: true,               //  Display dot navigation
-			fluid: false              //  Support responsive design. May break non-responsive designs
-	    })
-
-	    $j('.slider-arrow').click(function() {
-	        var fn = this.className.split(' ')[1]
-	        unslider.data('unslider')[fn]()
-	    })
-	})
 
 
 	if ($j('#single').hasClass('category-reportajes-graficos')) {
@@ -125,11 +112,6 @@ if (  $j('#single.category-entrevistas .meta').is(':visible') ) {
 	    window.open(url, 'twitter', opts);
 	 
 	    return false;
-	  });
-
-	$j('.article-wrap .side').stick_in_parent({
-		parent: '.article-wrap',
-		offset_top: 82
 	});
 
 	$j('.menu.mobile .menu-main-menu-container').hide();
