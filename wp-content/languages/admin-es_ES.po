@@ -10,20 +10,24 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Administration\n"
 
+#: wp-admin/about.php:79
+msgid "This site <strong>is not</strong> able to apply these updates automatically."
+msgstr ""
+
 #: wp-admin/includes/class-wp-upgrader.php:1374
 #: wp-admin/includes/update-core.php:664 wp-admin/includes/update-core.php:732
 msgid "The update cannot be installed because we will be unable to copy some files. This is usually due to inconsistent file permissions."
 msgstr "No se ha podido instalar la actualización debido a que no se han podido copiar algunos archivos. Normalmente esto es debido a permisos de archivo inconsistentes."
 
-#: wp-admin/includes/class-wp-upgrader.php:2177
+#: wp-admin/includes/class-wp-upgrader.php:2195
 msgid "WordPress %s is also now available."
 msgstr "WordPress %s también está ahora disponible."
 
-#: wp-admin/includes/class-wp-upgrader.php:2201
+#: wp-admin/includes/class-wp-upgrader.php:2219
 msgid "Your site at %1$s experienced a critical failure while trying to update WordPress to version %2$s."
 msgstr "Tu sitio en %1$s ha experimentado un fallo crítico mientras se trataba de actualizar WordPress a la versión %2$s."
 
-#: wp-admin/includes/class-wp-upgrader.php:2230
+#: wp-admin/includes/class-wp-upgrader.php:2248
 msgid "Your site was running version %s."
 msgstr "Tu sitio está ejecutando la versión %s."
 
@@ -55,63 +59,63 @@ msgstr "El proceso de actualización se ha hecho aún más fiable y seguro, con 
 msgid "You&#8217;ll still need to click &#8220;Update Now&#8221; once WordPress 3.8 is released, but we&#8217;ve never had more confidence in that beautiful blue button."
 msgstr "Todavía tendrás que hacer click sobre &#8220;Actualizar ahora&#8221; hasta que WordPress 3.8 sea lanzado, pero nunca hemos tenido tanta confianza en ese hermoso botón azul."
 
-#: wp-admin/about.php:68
+#: wp-admin/about.php:67
 msgid "This site <strong>is</strong> able to apply these updates automatically. Cool!"
 msgstr "Este sitio <strong>es capaz</strong> de aplicar esas actualizaciones automáticamente. ¡Genial!"
 
-#: wp-admin/about.php:70
+#: wp-admin/about.php:77
 msgid "This site <strong>is not</strong> able to apply these updates automatically. But we&#8217;ll email %s when there is a new security release."
 msgstr "Este sitio <strong>no es capaz</strong> de aplicar esas actualizaciones automáticamente. Pero te enviaremos un email a %s cuando haya una nueva actualización de seguridad."
 
-#: wp-admin/about.php:76
+#: wp-admin/about.php:89
 msgid "Create Stronger Passwords"
 msgstr "Crear contraseñas más fuertes"
 
-#: wp-admin/about.php:80
+#: wp-admin/about.php:93
 msgid "Your password is your site&#8217;s first line of defense. It&#8217;s best to create passwords that are complex, long, and unique. To that end, our password meter has been updated in WordPress 3.7 to recognize common mistakes that can weaken your password: dates, names, keyboard patterns (123456789), and even pop culture references."
 msgstr "Tu contraseña es la primera barrera de protección de tu sitio. Es mejor crear contraseñas complejas, largas y únicas. Para ello, nuestro medidor de contraseñas ha sido actualizado en WordPress 3.7, con el objetivo de reconocer fallos comunes que pueden hacer débiles tus contraseñas: fechas, nombres, patrones de teclado (123456789), incluso referencias de la cultura pop."
 
-#: wp-admin/about.php:81
+#: wp-admin/about.php:94
 msgid "Try it out on the right."
 msgstr "Pruébalo a la derecha."
 
-#: wp-admin/about.php:86
+#: wp-admin/about.php:99
 msgid "Getting the urge to <a href=\"%s\">change your password</a>?"
 msgstr "¿Tienes ganas de <a href=\"%s\">cambiar tu contraseña</a>?"
 
-#: wp-admin/about.php:94
+#: wp-admin/about.php:107
 msgid "Improved Search Results"
 msgstr "Mejores resultados de búsqueda"
 
-#: wp-admin/about.php:95
+#: wp-admin/about.php:108
 msgid "Search results are now ordered by how well the search query matches a post, instead of ordered only by date. For example, when your search terms match a post title, that result will be pushed to the top."
 msgstr "Los resultados de búsqueda están ahora ordenados por cómo de bien encajan con un artículo, en lugar de estar simplemente ordenados por fecha. Por ejemplo, cuando buscas un término que encaja con el título de un artículo, ese resultado aparecerá antes."
 
-#: wp-admin/about.php:98
+#: wp-admin/about.php:111
 msgid "Better Global Support"
 msgstr "Mejor soporte global"
 
-#: wp-admin/about.php:99
+#: wp-admin/about.php:112
 msgid "Localized versions of WordPress will receive faster and more complete translations. WordPress 3.7 adds support for automatically installing the right language files and keeping them up to date."
 msgstr "Las versiones internacionales de WordPress recibirán traducciones más completas y rápidas. WordPress 3.7 añade soporte para instalar automáticamente los archivos de idioma adecuados y los mantiene actualizados."
 
-#: wp-admin/about.php:109
+#: wp-admin/about.php:122
 msgid "More Background Updates (Experimental)"
 msgstr "Más actualizaciones en segundo plano (experimental)"
 
-#: wp-admin/about.php:110
+#: wp-admin/about.php:123
 msgid "Want WordPress to always update automatically, even for major feature releases? Want to always keep a certain plugin up to date in the background? WordPress 3.7 comes with fine-grained update controls for developers and systems administrators."
 msgstr "¿Quieres que WordPress siempre se actualice automáticamente, incluso en sus versiones principales? ¿Quieres mantener siempre al día cierto plugin en segundo plano? WordPress 3.7 incluye precisos controles de actualización para desarrolladores y administradores de sistemas."
 
-#: wp-admin/about.php:113
+#: wp-admin/about.php:126
 msgid "Advanced Date Queries"
 msgstr "Queries avanzadas por fecha"
 
-#: wp-admin/about.php:114
+#: wp-admin/about.php:127
 msgid "Developers can now query for posts within a date range, or that are older than or newer than a specific point in time. Or get really fancy: all posts written on Friday afternoons? Not&nbsp;a&nbsp;problem."
 msgstr "Ahora los desarrolladores pueden hacer queries de entradas dentro de un rango de fechas, o entre más antiguas o más nuevas a partir de una fecha concreta. Quieres cosas realmente chulas como … ¿todas las entradas escritas los viernes por la tarde? Sin problema."
 
-#: wp-admin/about.php:118
+#: wp-admin/about.php:131
 msgid "<code>wp_get_sites()</code> allows developers to easily get an array of all the sites on your network without resorting to a direct database query &mdash; just one of many improvements to multisite in WordPress 3.7."
 msgstr "<code>wp_get_sites()</code> permite a los desarrolladores obtener fácilmente una lista de todos los sitios de la red sin tener que recurrir a una consulta directa en base de datos; Sólo una de las muchas mejoras de multisitio en WordPress 3.7."
 
@@ -121,88 +125,88 @@ msgid "Update Translations"
 msgstr "Actualizar traducciones"
 
 #: wp-admin/includes/class-wp-upgrader-skins.php:558
-#: wp-admin/includes/class-wp-upgrader.php:1871
+#: wp-admin/includes/class-wp-upgrader.php:1889
 msgid "Updating translations for %1$s (%2$s)&#8230;"
 msgstr "Actualizando traducciones de %1$s (%2$s)&#8230;"
 
-#: wp-admin/includes/class-wp-upgrader.php:1870
+#: wp-admin/includes/class-wp-upgrader.php:1888
 msgid "Translations for %s"
 msgstr "Traducciones para %s"
 
-#: wp-admin/includes/class-wp-upgrader.php:2140
+#: wp-admin/includes/class-wp-upgrader.php:2158
 msgid "[%1$s] Your site has updated to WordPress %2$s"
 msgstr "[%1$s] Tu sitio ha sido actualizado a WordPress %2$s"
 
-#: wp-admin/includes/class-wp-upgrader.php:2146
+#: wp-admin/includes/class-wp-upgrader.php:2164
 msgid "[%1$s] WordPress %2$s is available. Please update!"
 msgstr "[%1$s] WordPress %2$s está disponible. Por favor, ¡actualiza!"
 
-#: wp-admin/includes/class-wp-upgrader.php:2151
+#: wp-admin/includes/class-wp-upgrader.php:2169
 msgid "[%1$s] URGENT: Your site may be down due to a failed update"
 msgstr "[%1$s] URGENTE: Tu sitio puede no estar funcionando debido a un fallo de actualización"
 
-#: wp-admin/includes/class-wp-upgrader.php:2166
+#: wp-admin/includes/class-wp-upgrader.php:2184
 msgid "Howdy! Your site at %1$s has been updated automatically to WordPress %2$s."
 msgstr "¡Hola! Tu sitio %1$s ha sido actualizado automáticamente a WordPress %2$s."
 
-#: wp-admin/includes/class-wp-upgrader.php:2169
+#: wp-admin/includes/class-wp-upgrader.php:2187
 msgid "No further action is needed on your part."
 msgstr "No se necesita ninguna acción adicional por tu parte."
 
-#: wp-admin/includes/class-wp-upgrader.php:2173
+#: wp-admin/includes/class-wp-upgrader.php:2191
 msgid "For more on version %s, see the About WordPress screen:"
 msgstr "Para más información sobre la versión %s, vea la página Acerca de WordPress:"
 
-#: wp-admin/includes/class-wp-upgrader.php:2186
+#: wp-admin/includes/class-wp-upgrader.php:2204
 msgid "Please update your site at %1$s to WordPress %2$s."
 msgstr "Por favor, actualiza tu sitio %1$s a WordPress %2$s."
 
-#: wp-admin/includes/class-wp-upgrader.php:2193
+#: wp-admin/includes/class-wp-upgrader.php:2211
 msgid "We tried but were unable to update your site automatically."
 msgstr "Lo intentamos, pero no hemos podido actualizar tu sitio automáticamente."
 
-#: wp-admin/includes/class-wp-upgrader.php:2178
-#: wp-admin/includes/class-wp-upgrader.php:2195
+#: wp-admin/includes/class-wp-upgrader.php:2196
+#: wp-admin/includes/class-wp-upgrader.php:2213
 msgid "Updating is easy and only takes a few moments:"
 msgstr "La actualización es fácil y sólo dura un momento:"
 
-#: wp-admin/includes/class-wp-upgrader.php:2203
+#: wp-admin/includes/class-wp-upgrader.php:2221
 msgid "Your site at %1$s experienced a critical failure while trying to update to the latest version of WordPress, %2$s."
 msgstr "Tu sitio %1$s ha experimentado un fallo crítico mientras se intentaba actualizar a la última versión de WordPress, %2$s."
 
-#: wp-admin/includes/class-wp-upgrader.php:2205
+#: wp-admin/includes/class-wp-upgrader.php:2223
 msgid "This means your site may be offline or broken. Don't panic; this can be fixed."
 msgstr "Esto significa que tu sitio puede estar roto o desconectado. No entre en pánico, esto puede ser arreglado."
 
-#: wp-admin/includes/class-wp-upgrader.php:2207
+#: wp-admin/includes/class-wp-upgrader.php:2225
 msgid "Please check out your site now. It's possible that everything is working. If it says you need to update, you should do so:"
 msgstr "Por favor comprueba tu sitio ahora. Es posible que todo esté funcionando. Si indica que necesitas actualizar, deberías hacerlo:"
 
-#: wp-admin/includes/class-wp-upgrader.php:2214
+#: wp-admin/includes/class-wp-upgrader.php:2232
 msgid "Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers."
 msgstr "Mantener tu sitio actualizado es importante para la seguridad. También hace que Internet sea un lugar más seguro para ti y tus lectores."
 
-#: wp-admin/includes/class-wp-upgrader.php:2217
+#: wp-admin/includes/class-wp-upgrader.php:2235
 msgid "If you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help."
 msgstr "Si tienes algún problema o necesitas ayuda, los voluntarios en los foros de soporte WordPress.org pueden ayudarte."
 
-#: wp-admin/includes/class-wp-upgrader.php:2222
+#: wp-admin/includes/class-wp-upgrader.php:2240
 msgid "You also have some plugins or themes with updates available. Update them now:"
 msgstr "También tienes algunos plugins o temas con actualizaciones disponibles. Actualizalos ahora:"
 
-#: wp-admin/includes/class-wp-upgrader.php:2226
+#: wp-admin/includes/class-wp-upgrader.php:2244
 msgid "The WordPress Team"
 msgstr "El equipo de WordPress"
 
-#: wp-admin/includes/class-wp-upgrader.php:2231
+#: wp-admin/includes/class-wp-upgrader.php:2249
 msgid "We have some data that describes the error your site encountered."
 msgstr "Tenemos algunos datos que describen el error que se ha producido en tu sitio."
 
-#: wp-admin/includes/class-wp-upgrader.php:2232
+#: wp-admin/includes/class-wp-upgrader.php:2250
 msgid "Your hosting company, support forum volunteers, or a friendly developer may be able to use this information to help you:"
 msgstr "Su empresa de alojamiento, los voluntarios del foro, o un desarrollador pueden utilizar esta información para ayudarte:"
 
-#: wp-admin/includes/class-wp-upgrader.php:2245
+#: wp-admin/includes/class-wp-upgrader.php:2263
 msgid "Error code: %s"
 msgstr "Código de error: %s"
 
@@ -258,11 +262,11 @@ msgstr "La actualización de la traducción ha fallado."
 msgid "Translation updated successfully."
 msgstr "Traducción actualizada con éxito."
 
-#: wp-admin/includes/class-wp-upgrader.php:1861
+#: wp-admin/includes/class-wp-upgrader.php:1879
 msgid "Updating theme: %s"
 msgstr "Actualizando tema: %s"
 
-#: wp-admin/includes/class-wp-upgrader.php:1866
+#: wp-admin/includes/class-wp-upgrader.php:1884
 msgid "Updating plugin: %s"
 msgstr "Actualizando plugin: %s"
 
@@ -340,11 +344,11 @@ msgstr "Tratando de volver a la versión anterior."
 msgid "Due to an error during updating, WordPress has rolled back to your previous version."
 msgstr "Debido a un error durante la actualización WordPress ha vuelto a tu versión anterior."
 
-#: wp-admin/includes/class-wp-upgrader.php:1855
+#: wp-admin/includes/class-wp-upgrader.php:1873
 msgid "Updating to WordPress %s"
 msgstr "Actualizando a WordPress %s"
 
-#: wp-admin/includes/class-wp-upgrader.php:1856
+#: wp-admin/includes/class-wp-upgrader.php:1874
 msgid "WordPress %s"
 msgstr "WordPress %s"
 
@@ -1067,7 +1071,7 @@ msgstr "Puedes subir e insertar archivos multimedia (imágenes, audios, document
 msgid "You can also embed media from many popular websites including Twitter, YouTube, Flickr and others by pasting the media URL on its own line into the content of your post/page. Please refer to the Codex to <a href=\"http://codex.wordpress.org/Embeds\">learn more about embeds</a>."
 msgstr "Puedes incrustar contenidos de muchos sitios web como Twitter, You Tube, Flickr y otros sólo con poner la URL del contenido en una línea (sólo la URL en el párrafo) en la entrada o página. Por favor, consulta el Codex <a href=\"http://codex.wordpress.org/Embeds\">para saber más sobre contenido incrustado</a>"
 
-#: wp-admin/about.php:117
+#: wp-admin/about.php:130
 msgid "Multisite Improvements"
 msgstr "Mejoras en Multisitio"
 
@@ -2511,23 +2515,23 @@ msgstr "Contribuidores"
 msgid "Show Toolbar when viewing site"
 msgstr "Muestra la barra de herramientas en el sitio"
 
-#: wp-admin/about.php:153
+#: wp-admin/about.php:166
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>Versión %1$s</strong> marcada como actualización de seguridad, soluciona el error %2$s."
 msgstr[1] "<strong>Versión %1$s</strong> marcada como actualización de seguridad, soluciona %2$s errores."
 
-#: wp-admin/about.php:160
+#: wp-admin/about.php:173
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "Para más información, lee <a href=\"%s\">las notas de la versión</a>."
 
-#: wp-admin/about.php:157
+#: wp-admin/about.php:170
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>Versión %1$s</strong> marcada como actualización de seguridad, soluciona el error %2$s."
 msgstr[1] "<strong>Versión %1$s</strong> marcada como actualización de seguridad, soluciona %2$s errores."
 
-#: wp-admin/about.php:149
+#: wp-admin/about.php:162
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>Versión %1$s</strong> soluciona el bug %2$s."
@@ -2537,7 +2541,7 @@ msgstr[1] "<strong>Versión %1$s</strong> soluciona %2$s bugs."
 msgid "Welcome to your WordPress Dashboard! This is the screen you will see when you log in to your site, and gives you access to all the site management features of WordPress. You can get help for any screen by clicking the Help tab in the upper corner."
 msgstr "¡Bienvenido a tu panel de WordPress! Esta es la pantalla que verás cuando inicies sesión en tu sitio, que te da acceso a todas las funciones de gestión del sitio de WordPress. Puedes obtener ayuda para cualquier pantalla haciendo clic en la pestaña Ayuda en la esquina superior."
 
-#: wp-admin/about.php:142
+#: wp-admin/about.php:155
 msgid "Maintenance and Security Release"
 msgid_plural "Maintenance and Security Releases"
 msgstr[0] "Versión de mantenimiento y seguridad"
@@ -2547,19 +2551,19 @@ msgstr[1] "Versiones de mantenimiento y seguridad"
 msgid "What&#8217;s New"
 msgstr "¿Qué hay de nuevo?"
 
-#: wp-admin/about.php:141
+#: wp-admin/about.php:154
 msgid "Security Release"
 msgid_plural "Security Releases"
 msgstr[0] "Versión de seguridad"
 msgstr[1] "Versiones de seguridad"
 
-#: wp-admin/about.php:140
+#: wp-admin/about.php:153
 msgid "Maintenance Release"
 msgid_plural "Maintenance Releases"
 msgstr[0] "Versión de mantenimiento"
 msgstr[1] "Versiones de mantenimiento"
 
-#: wp-admin/about.php:145
+#: wp-admin/about.php:158
 msgid "<strong>Version %1$s</strong> addressed a security issue."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues."
 msgstr[0] "<strong>La versión %1$s</strong> resuelve un problema de seguridad."
@@ -2569,7 +2573,7 @@ msgstr[1] "<strong>La versión %1$s</strong> resuelve varios problemas de seguri
 msgid "This screen allows you to choose your default permalink structure. You can choose from common settings or create custom URL structures."
 msgstr "Esta pantalla te permite elegir la estructura de enlaces permanentes. Puedes elegir entre las más habituales o crear una estructura de URL personalizada."
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:138
 msgid "Return to Updates"
 msgstr "Volver a las actualizaciones"
 
@@ -2887,11 +2891,11 @@ msgstr "Es común la inclusión directa de wp-admin/includes/template.php en el 
 msgid "Welcome to WordPress %s"
 msgstr "Bienvenido a WordPress %s"
 
-#: wp-admin/about.php:129
+#: wp-admin/about.php:142
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Ve a Escritorio &rarr; Inicio"
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:138
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Vuelve a Escritorio &rarr; Actualizaciones"
 
@@ -2923,7 +2927,7 @@ msgstr "Nueva característica: Barra de Herramientas"
 msgid "Core Developers"
 msgstr "Jefe de Desarrollo"
 
-#: wp-admin/about.php:105
+#: wp-admin/about.php:118
 msgid "Under the Hood"
 msgstr "Bajo el Capó"
 
@@ -5685,7 +5689,7 @@ msgstr "El usuario ya existe. No se ha modificado la contraseña."
 msgid "You cannot update because <a href=\"http://codex.wordpress.org/Version_%1$s\">WordPress %1$s</a> requires MySQL version %2$s or higher. You are running version %3$s."
 msgstr "La actualización no puede instalarse porque <a href=\"http://codex.wordpress.org/Version_%1$s\">WordPress %1$s</a> requiere la versión %2$s o superior de MySQL. Estás usando la versión %3$s."
 
-#: wp-admin/includes/class-wp-upgrader.php:1887
+#: wp-admin/includes/class-wp-upgrader.php:1905
 #: wp-admin/includes/update-core.php:984 wp-admin/update-core.php:418
 msgid "WordPress updated successfully"
 msgstr "WordPress ha sido actualizado correctamente"
@@ -5772,7 +5776,7 @@ msgctxt "theme"
 msgid "Install Themes"
 msgstr "Instalar temas"
 
-#: wp-admin/about.php:129
+#: wp-admin/about.php:142
 msgid "Go to Dashboard"
 msgstr "Ir al Escritorio"
 
@@ -7214,7 +7218,7 @@ msgstr "Compatibilidad con WordPress %1$s: %2$d%% (%3$d votos de \"funciona\" de
 msgid "Compatibility with WordPress %1$s: Unknown"
 msgstr "Compatibilidad con WordPress %1$s: Desconocida"
 
-#: wp-admin/includes/class-wp-upgrader.php:1885 wp-admin/update-core.php:413
+#: wp-admin/includes/class-wp-upgrader.php:1903 wp-admin/update-core.php:413
 msgid "Installation Failed"
 msgstr "Instalación fallida"
 
