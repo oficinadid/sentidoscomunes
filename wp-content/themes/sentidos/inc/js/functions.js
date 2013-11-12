@@ -58,4 +58,23 @@
     $('.menu.mobile .menu-main-menu-container').fadeToggle('fast');
   });
 
+  /*
+    sticky sidebar entrevistas
+  */
+  $('.side').waypoint('sticky', {
+    offset: 80
+  });
+
+  $('.siguenos').waypoint(function(direction) {
+    if (direction == 'down') {
+      $('.side').addClass('stuck-bottom');
+    }
+    else if (direction == 'up') {
+      $('.side').removeClass('stuck-bottom');
+    };
+    // $('.side').toggleClass('unstuck');
+  }, { offset: 200 })
+
+
+
 }(jQuery));

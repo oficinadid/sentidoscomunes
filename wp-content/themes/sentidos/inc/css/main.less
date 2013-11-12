@@ -1054,6 +1054,7 @@ section.secondary big, #recent_comments big {width:auto;}
 		#comments{
 			margin:40px 0 20px 200px!important;
 		}
+
 		.meta{
 			float:left;
 			background:@grey;
@@ -1140,7 +1141,16 @@ section.secondary big, #recent_comments big {width:auto;}
 		}
 		
 		.article-wrap {
+			overflow: hidden;
+			clear: both;
+			.sticky-wrapper {
+				float: left;
+			}
 			.side{
+				&.stuck {
+					position:fixed;
+					top:80px;
+				}
 				float:left;
 				padding:0;margin:0;
 				height: 500px;
