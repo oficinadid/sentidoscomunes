@@ -1,123 +1,61 @@
-var $j = jQuery.noConflict();
+(function ($) {
+  "use strict";
 
+  if ($('#single').hasClass('category-reportajes-graficos')) {
+    $('body').addClass('category-reportajes-graficos');
+  }
 
-$j(document).ready(function() {
+  $('.search-toggle a').on('click', function () {
+    $('#search_form').toggleClass('hidden');
+    $('body').toggleClass('searching');
+    $(this).toggleClass('pressed');
+    return false;
+  });
 
+  $('.edition article').on('click', function () {
+    var link = $(this).find('.img').attr('href');
+    location.href = link;
+    return false;
 
+  });
 
-	if ($j('#single').hasClass('category-reportajes-graficos')) {
-		$j('body').addClass('category-reportajes-graficos')
-	};
+  function expandirMenu() {
+    $(this).parent().addClass('open');
+    $(this).parent().find('ul').addClass('open');
+    $(this).addClass('open');
+    return false;
+  }
 
+  function contraerMenu() {
+    $(this).parent().removeClass('open');
+    $(this).parent().find('ul').removeClass('open');
+    $(this).removeClass('open');
+    return false;
+  }
 
-    $j('.search-toggle a').on('click', function(){
-		$j('#search_form').toggleClass('hidden');
-		$j('body').toggleClass('searching');
-		$j(this).toggleClass('pressed');
-		return false;
-	})
+  $(".this_week").hoverIntent(expandirMenu, contraerMenu);
 
-	$j('.edition article').on('click', function(){
-		var link = $j(this).find('.img').attr('href')
-		location.href = link
-		return false;
-	})
+  function getUrlVars() {
+    var vars, hash, hashes;
+    vars = [], hash;
+    hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
 
-	function expandirMenu() {
-		$j(this).parent().addClass('open');
-		$j(this).parent().find('ul').addClass('open');
-		$j(this).addClass('open');
-		return false
-	}
-	function contraerMenu() {
-		$j(this).parent().removeClass('open')
-		$j(this).parent().find('ul').removeClass('open')
-		$j(this).removeClass('open')
-		return false
-	}
+  var search = getUrlVars()["s"];
+  var btn = getUrlVars()["submit"];
+  if ( search != '' && btn == 'Buscar') {
+    $('#search_form').removeClass('hidden');
+  };
 
-	$j(".this_week").hoverIntent(expandirMenu,contraerMenu);
+  $('.menu.mobile .menu-main-menu-container').hide();
+  $('.menu.mobile a.trigger').click(function () {
+    $('.menu.mobile .menu-main-menu-container').fadeToggle('fast');
+  });
 
-	
-
-if (  $j('#single.category-entrevistas .meta').is(':visible') ) {
-
-	var top = ($j('#single.category-entrevistas .meta').offset().top)-150
-
-	$j(window).scroll(function(){
-		if ($j(this).scrollTop() > top){
-			$j('#single.category-entrevistas .meta').addClass('fixed');
-		}else{
-			$j('#single.category-entrevistas .meta').removeClass('fixed');
-		}
-	})
-
-}
-
-
-// Contratulations
-	var keys=[];var konami='38,38,40,40,37,39,37,39,66,65';
-	
-
-
-	function getUrlVars()
-	{
-	    var vars = [], hash;
-	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-	    for(var i = 0; i < hashes.length; i++)
-	    {
-	        hash = hashes[i].split('=');
-	        vars.push(hash[0]);
-	        vars[hash[0]] = hash[1];
-	    }
-	    return vars;
-	}
-
-	var search = getUrlVars()["s"];
-	var btn = getUrlVars()["submit"];
-	if ( search != '' && btn == 'Buscar') {
-		$j('#search_form').removeClass('hidden')
-	};
-
-
-	$j('#via-publica figure').on('mouseenter', function(){
-		$j('#via-publica figure').removeClass('open')
-		$j('#via-publica figure').find('figcaption').removeClass('open')
-
-		console.log('in')
-		var position = $j(this).position()
-			position = (( position.top + $j(this).height() )+'px')
-
-		$j(this).addClass('open')
-		$j(this).find('figcaption').css("top", position).addClass('open')
-	})
-
-	$j('#via-publica figure').on('mouseleave', function(){
-		$j(this).removeClass('open')
-		$j(this).find('figcaption').removeClass('open')	
-	})
-
-	$j('.popup').click(function(event) {
-	    var width  = 575,
-	        height = 400,
-	        left   = ($j(window).width()  - width)  / 2,
-	        top    = ($j(window).height() - height) / 2,
-	        url    = this.href,
-	        opts   = 'status=1' +
-	                 ',width='  + width  +
-	                 ',height=' + height +
-	                 ',top='    + top    +
-	                 ',left='   + left;
-	    
-	    window.open(url, 'twitter', opts);
-	 
-	    return false;
-	});
-
-	$j('.menu.mobile .menu-main-menu-container').hide();
-
-	$j('.menu.mobile a.trigger').click(function(){
-		$j('.menu.mobile .menu-main-menu-container').fadeToggle('fast');
-	});
-
-});
+}(jQuery));

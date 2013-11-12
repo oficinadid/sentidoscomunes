@@ -82,7 +82,14 @@
 	</div>
 </footer>
 
+<?php wp_footer(); ?>
+
+
 <script type="text/javascript">
+
+/* disqus
+/* ------------------------------------ */ 
+
 //<![CDATA[
 (function() {
     var links = document.getElementsByTagName('a');
@@ -95,9 +102,9 @@
     document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/sentidoscomunes/get_num_replies.js' + query + '"></' + 'script>');
 })();
 //]]>
-</script>
 
-<script type="text/javascript">
+  /* Analytics */
+  /* ------------------------------------ */ 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-10133338-2']);
   _gaq.push(['_trackPageview']);

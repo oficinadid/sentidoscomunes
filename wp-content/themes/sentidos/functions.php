@@ -17,6 +17,18 @@ add_image_size('320x215', 320, 215, true); // small
 add_image_size('640x320', 640, 320, true); // med vertical
 
 
+/*  Enqueue javascript
+/* ------------------------------------ */ 
+function sc_scripts()  
+{
+    wp_enqueue_script( 'hoverIntent', true );
+    wp_enqueue_script( 'functions', get_template_directory_uri() . '/inc/js/functions.js', array( 'jquery' ),'', true ); 
+     
+    // if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
+}  
+add_action( 'wp_enqueue_scripts', 'sc_scripts' );  
+
+
 function arphabet_widgets_init() {
 
 	register_sidebar( array(
