@@ -28,7 +28,7 @@ function sc_scripts()
     if (in_category('2944')) {
     	wp_enqueue_script( 'waypoints_sticky', get_template_directory_uri() . '/inc/js/waypoints-sticky.min.js', array( 'jquery', 'waypoints' ),'', true );
     }
-    wp_enqueue_script( 'functions', get_template_directory_uri() . '/inc/js/functions.js', array( 'jquery' ),'', true ); 
+    wp_enqueue_script( 'functions', get_template_directory_uri() . '/inc/js/functions.min.js', array( 'jquery' ),'', true ); 
      
     // if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 }  

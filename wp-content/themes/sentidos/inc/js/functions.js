@@ -67,9 +67,11 @@
 
   $('.siguenos').waypoint(function(direction) {
     if (direction == 'down') {
+      $('.side').removeClass('stuck');
       $('.side').addClass('stuck-bottom');
     }
     else if (direction == 'up') {
+      $('.side').addClass('stuck');
       $('.side').removeClass('stuck-bottom');
     };
     // $('.side').toggleClass('unstuck');
