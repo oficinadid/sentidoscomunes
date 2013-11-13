@@ -75,7 +75,7 @@
       $('.side').removeClass('stuck-bottom');
     };
     // $('.side').toggleClass('unstuck');
-  }, { offset: 200 })
+  }, { offset: 106 })
 
 
 
