@@ -7,6 +7,10 @@
 		display:none;
 	}
 
+	.menu.full .this_week {
+		width:766px;
+	}
+
 	#search_form form {
 		width:960px !important;
 	}
@@ -18,13 +22,16 @@
 		width:640px;
 	}
 	#single #content header .titles{
-		width:640px;
+		width:100%;
 	}
 	#single #content header .titles .title{
 		width:100%;
 	}
 	#single #content .content #the_content{
 		padding:0 20px 20px 0;
+	}
+	#single #content .content #the_content img {
+		max-width:100%;
 	}
 	#via-publica #the_content .con_left{
 		width:640px;
@@ -89,7 +96,7 @@
 	}
 	.meta {display:none; visibility:hidden;}
 	.edition .meta {display:block; visibility:visible;}
-	.side {display:none; visibility:hidden;}
+	.category-entrevistas .side {display:none; visibility:hidden;}
 
 	.mafi {
 		iframe {
@@ -1176,6 +1183,10 @@ and (orientation : portrait) {
 			}
 		}
 	}
+	.streaming {
+		width:90%;
+		max-width:90%;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1613,6 +1624,10 @@ and (orientation : landscape) {
 			}
 		}
 	}
+	.streaming {
+		width:90%;
+		max-width:90%;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1767,5 +1782,9 @@ and (orientation : landscape) {
 				padding:0 10px;
 			}
 		}
+	}
+	.streaming {
+		width:90%;
+		max-width:90%;
 	}
 }

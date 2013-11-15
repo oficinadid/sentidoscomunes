@@ -17,9 +17,12 @@ get_header();
 			<h1 class="title"><?php the_title(); ?></h1>
 		</header>
 
+		<div class="cf"></div>
+
 		<article class="streaming">
-			<?php the_content(); ?>
 			
+			<iframe width="530" height="298" src="//www.youtube.com/embed/_WJ3Fli7iYY?list=FLUItTVp98YRtNLjzGgFfH3g" frameborder="0" allowfullscreen></iframe>
+
 		</article>
 
 		<?php endwhile; ?>
