@@ -83,6 +83,13 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+	var addToHomeConfig = {
+		returningVisitor: true,
+		expire: 720	
+	};
+</script>
+<script src="<?php bloginfo('template_url') ?>/inc/js/add2home.js"></script>
 
 
 <script type="text/javascript">
