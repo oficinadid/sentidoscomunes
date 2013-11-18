@@ -12,8 +12,28 @@
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Sentidos Comunes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/inc/img/apple/touch-icon-iphone-precomposed.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_url'); ?>/inc/img/apple/touch-icon-ipad-precomposed.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_url'); ?>/inc/img/apple/touch-icon-iphone4-precomposed.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url'); ?>/inc/img/apple/touch-icon-ipad-retina-precomposed.png" />
+
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-retina.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-5.png"  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (oriantation:portrait)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-landscape.png" media="(device-width: 1024px) and (device-height: 768px) and (-webkit-device-pixel-ratio: 1) and (oriantation:landscape)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-retina-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (oriantation:portrait)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-retina-landscape.png" media="(device-width: 1024px) and (device-height: 768px) and (-webkit-device-pixel-ratio: 2) and (oriantation:landscape)">
+
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
