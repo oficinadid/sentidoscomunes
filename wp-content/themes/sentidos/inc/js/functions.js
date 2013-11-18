@@ -61,18 +61,18 @@
   /*
     sticky sidebar entrevistas
   */
-  $('.side').waypoint('sticky', {
+  $('.entrevistas .side').waypoint('sticky', {
     offset: 80
   });
 
-  $('.siguenos').waypoint(function(direction) {
+  $('.entrevistas .siguenos').waypoint(function(direction) {
     if (direction == 'down') {
-      $('.side').removeClass('stuck');
-      $('.side').addClass('stuck-bottom');
+      $('.entrevistas .side').removeClass('stuck');
+      $('.entrevistas .side').addClass('stuck-bottom');
     }
     else if (direction == 'up') {
-      $('.side').addClass('stuck');
-      $('.side').removeClass('stuck-bottom');
+      $('.entrevistas .side').addClass('stuck');
+      $('.entrevistas .side').removeClass('stuck-bottom');
     };
     // $('.side').toggleClass('unstuck');
   }, { offset: 250 })

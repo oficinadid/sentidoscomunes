@@ -22,18 +22,41 @@ add_image_size('640x320', 640, 320, true); // med vertical
 function sc_scripts()  
 {
     wp_enqueue_script( 'hoverIntent', true );
-    wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/inc/js/waypoints.min.js', array( 'jquery' ),'', true );
+
+    if (is_home()) {
+    	wp_enqueue_script( 'add2home', get_template_directory_uri() . '/inc/js/add2home.js','', true );
+    }
 
     // waypoints_sticky
     if (in_category('2944')) {
+    	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/inc/js/waypoints.min.js', array( 'jquery' ),'', true );
     	wp_enqueue_script( 'waypoints_sticky', get_template_directory_uri() . '/inc/js/waypoints-sticky.min.js', array( 'jquery', 'waypoints' ),'', true );
     }
     wp_enqueue_script( 'functions', get_template_directory_uri() . '/inc/js/functions.min.js', array( 'jquery' ),'', true ); 
      
     // if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 }  
-add_action( 'wp_enqueue_scripts', 'sc_scripts' );  
+add_action( 'wp_enqueue_scripts', 'sc_scripts' );
 
+
+/*  Agregamos categorías a body_class
+/* ------------------------------------ */ 
+add_filter('body_class','add_category_to_single');
+function add_category_to_single($classes, $class) {
+	if (is_single() ) {
+		global $post;
+		foreach((get_the_category($post->ID)) as $category) {
+			// añadimos slug de categoría al array $classes
+			$classes[] = $category->category_nicename;
+		}
+	}
+	// retornamos el array $classes
+	return $classes;
+}
+
+
+/*  Widgets
+/* ------------------------------------ */ 
 
 function arphabet_widgets_init() {
 
