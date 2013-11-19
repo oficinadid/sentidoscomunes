@@ -12,7 +12,7 @@
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-<meta name="apple-mobile-web-app-title" content="Sentidos Comunes">
+<meta name="apple-mobile-web-app-title" content="SC">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -25,14 +25,14 @@
 <link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_url'); ?>/inc/img/apple/touch-icon-iphone4-precomposed.png">
 <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url'); ?>/inc/img/apple/touch-icon-ipad-retina-precomposed.png" />
 
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-retina.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup.png" media="(device-width: 320px)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-retina.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)">
 <link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-5.png"  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
 
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (oriantation:portrait)">
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-landscape.png" media="(device-width: 1024px) and (device-height: 768px) and (-webkit-device-pixel-ratio: 1) and (oriantation:landscape)">
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-retina-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (oriantation:portrait)">
-<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-retina-landscape.png" media="(device-width: 1024px) and (device-height: 768px) and (-webkit-device-pixel-ratio: 2) and (oriantation:landscape)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-portrait.png" media="(device-width: 768px) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-landscape.png" media="(device-width: 768px) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-retina-portrait.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="<?php bloginfo('template_url'); ?>/inc/img/apple/startup-ipad-retina-landscape.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
 
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
