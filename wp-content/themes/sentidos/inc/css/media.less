@@ -353,6 +353,25 @@ and (orientation : portrait) {
 		}
 	}
 
+	.search {
+		ul.wrapper.nav_bar {
+			padding:0 10px;
+		}
+		section#archive.wrapper {
+			padding:0 10px;
+		}
+		article {
+			width:239px !important;
+			margin: 10px 5px 15px !important;
+			figure {
+				img {
+					width:100%;
+					height:160px;
+				}
+			}
+		}
+	}
+
 	.siguenos .content-siguenos {
 		width:768px !important;
 		h3 {
@@ -446,6 +465,60 @@ and (orientation : portrait) {
 		max-width:680px!important;
 		margin: 0px 0 20px 0!important;
 	}
+	#single.category-columnas,
+	#single.category-infografias,
+	#single.category-noticias {
+		padding:0 20px;
+		#content {
+			width:748px !important;
+			header.full {
+				width:728px !important;
+				.titles {
+					width:auto;
+					.title {
+						width:auto;
+					}
+				}
+			}
+			.content {
+				width:728px !important;
+				border-right:none;
+				#the_content {
+					padding:0 0 20px !important;
+				}
+			}
+		}
+		aside.sidebar {
+			display:none;
+			visibility:hidden;
+		}
+	}
+	#single.category-infografias {
+		#content {
+			.content {
+				#the_content {
+					margin:40px 0 20px 0 !important;
+				}
+			}
+		}
+	}
+
+	#agenda .content .event {
+		.date {
+			width:140px;
+		}
+		.img {
+			width:250px;
+			img {
+				height:auto;
+			}	
+		}
+		.desc {
+			width:310px;
+			padding:0 10px;
+		}
+	}
+
 	#reportaje #gallery img{
 		width:768px!important;
 	}
@@ -461,15 +534,6 @@ and (orientation : portrait) {
 		.con_right {
 			width:300px;
 			padding:0 0 0 20px;
-		}
-	}
-	#single {
-		#content .content #comments {
-			padding:0 20px 0 0;
-		}
-		aside.sidebar {
-			display:none;
-			visibility:hidden;
 		}
 	}
 }
@@ -735,6 +799,34 @@ and (orientation : landscape) {
 		max-width:680px!important;
 		margin: 0px 0 20px 0!important;
 	}
+	
+	#single.category-columnas,
+	#single.category-infografias,
+	#single.category-noticias {
+		width:1024px;
+		padding:0 20px;
+		#content {
+			width:984px !important;
+			header.full {
+				width:984px !important;
+				.titles {
+					width:auto;
+					.title {
+						width:auto;
+					}
+				}
+			}
+			.content {
+				width:664px !important;
+				border-right:none;
+				#the_content {
+					width:664px;
+					padding:0 40px 20px 0 !important;
+				}
+			}
+		}
+	}
+
 	#reportaje #gallery img{
 		width:960px!important;
 	}
