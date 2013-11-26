@@ -1237,7 +1237,7 @@ and (orientation : portrait) {
 	#single .category-entrevistas .content {
 		width:320px !important;
 		#the_content {
-			margin:40px 10px 20px !important;
+			margin:40px 0 20px !important;
 			h1 {
 				margin:0 0 40px 0 !important
 			}
@@ -1266,6 +1266,10 @@ and (orientation : portrait) {
 		h3 {
 			height:auto;
 		}
+	}
+	#archive.short article {
+		min-height:350px;
+		height:auto;
 	}
 	body.single {
 		#reportaje {
@@ -1371,6 +1375,9 @@ and (orientation : portrait) {
 		top:50px;
 		height:auto;
 	}
+	#reportaje .grey .image .wrapper h3 {
+		margin:0 10px 20px 0;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1445,7 +1452,7 @@ and (orientation : landscape) {
 						display:block;
 						clear:both;
 						a {
-							padding:10px;
+							padding:7px 10px;
 							margin:0 20px 0 10px;
 							display:block;
 							text-transform:uppercase;
@@ -1751,7 +1758,7 @@ and (orientation : landscape) {
 		float:none;
 		margin:10px auto 25px;
 		height:auto !important;
-		padding:0 0 5px;
+		padding:0 0 40px;
 		&:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
 		figure {
 			img {
@@ -1817,12 +1824,12 @@ and (orientation : landscape) {
 		max-width:90%;
 	}
 	#single #content .content {
-		width:320px;
+		width:480px;
 		border-right:none;
-		padding:0 10px;
+		padding:0 20px;
 		#the_content {
 			margin:20px 0;
-			padding:0 0 20px;
+			padding:0;
 			.source span {
 				margin:20px 10px 0;
 			}
@@ -1868,19 +1875,55 @@ and (orientation : landscape) {
 		top:50px;
 		height:auto;
 	}
+
+	#via-publica #the_content {
+		width:440px;
+		margin:0 20px;
+		.con_left {
+			width:440px;
+			padding:0;
+		}
+		.con_right {
+			width:440px;
+			padding:0;
+		}
+	}
+	#agenda .content .event {
+		.date {
+			width:120px;
+			small {
+				font-size:1.6em;
+			}
+		}
+		.img {
+			width:150px;
+			min-height:100px;
+			img {
+				width:100%;
+				height:auto;
+			}
+		}
+		.desc {
+			width:140px;
+			min-height:100px;
+			h3 {
+				font-size:1.7em;
+			}
+		}
+	}
+	#reportaje .grey .image .wrapper h3 {
+		margin:0 10px 20px 0;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* - iPhone 5 Landscape - */////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : landscape) {
+@media only screen and (device-aspect-ratio: 40/71) and (orientation : landscape) {
 	
 	body {
-		padding:60px 0 0 !important;
+		padding:40px 0 0 !important;
 		width:568px;
 	}
 	.wrapper{
@@ -1923,7 +1966,7 @@ and (orientation : landscape) {
 		width:568px;
 	}
 	ul.wrapper.nav_bar {
-		width:460px;
+		width:528px;
 		margin:0 10px 15px;
 	}
 	#single #content .content {
@@ -1962,7 +2005,7 @@ and (orientation : landscape) {
 		float:none;
 		margin:10px auto 25px;
 		height:auto !important;
-		padding:0 0 5px;
+		padding:0 0 20px;
 		&:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
 		figure {
 			img {
@@ -2023,8 +2066,45 @@ and (orientation : landscape) {
 			}
 		}
 	}
-	.streaming {
-		width:90%;
-		max-width:90%;
+
+	#single #content .content {
+		width:568px;
 	}
+
+	#via-publica #the_content {
+		width:528px;
+		margin:0 20px;
+		.con_left {
+			width:528px;
+			padding:0;
+		}
+		.con_right {
+			width:528px;
+			padding:0;
+		}
+	}
+	#agenda .content .event {
+		.date {
+			width:120px;
+			small {
+				font-size:1.6em;
+			}
+		}
+		.img {
+			width:200px;
+			min-height:100px;
+			img {
+				width:100%;
+				height:auto;
+			}
+		}
+		.desc {
+			width:200px;
+			min-height:100px;
+			h3 {
+				font-size:2em;
+			}
+		}
+	}
+
 }
