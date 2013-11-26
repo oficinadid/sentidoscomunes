@@ -83,12 +83,7 @@
 </footer>
 
 
-<script>
-	var addToHomeConfig = {
-		returningVisitor: true,
-		expire: 720	
-	};
-</script>
+<script> var addToHomeConfig = {returningVisitor: true, expire: 720 }; </script>
 <?php wp_footer(); ?>
 
 
