@@ -1,4 +1,10 @@
 ------------------------------------------------------------------------------------------------------------------
+Version 2.3
+    - Updated tooltip script from qTip to jQuery UI
+	- Fixed typo "unsubscrbed" in debug statement
+	- Fixed issue where upgrade class was not always included when MailChimp details are written on the plugins page
+
+------------------------------------------------------------------------------------------------------------------
 Version 2.2
     - Updated automatic upgrade so that it caches remote requests for 12 hours (even on plugin's page)
     - Fixed issue with groups not being removed correctly when using the filter "gform_mailchimp_keep_existing_groups" to override default functionality and allow groups to be removed.

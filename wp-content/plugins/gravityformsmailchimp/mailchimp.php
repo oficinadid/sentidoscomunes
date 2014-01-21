@@ -3,7 +3,7 @@
 Plugin Name: Gravity Forms MailChimp Add-On
 Plugin URI: http://www.gravityforms.com
 Description: Integrates Gravity Forms with MailChimp allowing form submissions to be automatically sent to your MailChimp account
-Version: 2.2
+Version: 2.3
 Author: rocketgenius
 Author URI: http://www.rocketgenius.com
 
@@ -33,8 +33,8 @@ class GFMailChimp {
     private static $path = "gravityformsmailchimp/mailchimp.php";
     private static $url = "http://www.gravityforms.com";
     private static $slug = "gravityformsmailchimp";
-    private static $version = "2.2";
-    private static $min_gravityforms_version = "1.5";
+    private static $version = "2.3";
+    private static $min_gravityforms_version = "1.7.6.11";
     private static $supported_fields = array("checkbox", "radio", "select", "text", "website", "textarea", "email", "hidden", "number", "phone", "multiselect", "post_title",
 		                            "post_tags", "post_custom_field", "post_content", "post_excerpt");
 
@@ -178,6 +178,9 @@ class GFMailChimp {
     }
 
     public static function plugin_row(){
+    	if(!class_exists("RGMailChimpUpgrade"))
+            require_once("plugin-upgrade.php");
+            
         if(!self::is_gravityforms_supported()){
             $message = sprintf(__("Gravity Forms " . self::$min_gravityforms_version . " is required. Activate it now or %spurchase it today!%s"), "<a href='http://www.gravityforms.com'>", "</a>");
             RGMailChimpUpgrade::display_plugin_message($message, true);
@@ -1005,19 +1008,13 @@ class GFMailChimp {
                     for(var i in groups)
                         SetGroupCondition(groups[i]["main"], groups[i]["sub"],"","");
 
-                    //initializing mailchimp group tooltip
-                    jQuery('.tooltip_mailchimp_groups').qtip({
-                         content: jQuery('.tooltip_mailchimp_groups').attr('tooltip'), // Use the tooltip attribute of the element for the content
-                         show: { delay: 500, solo: true },
-                         hide: { when: 'mouseout', fixed: true, delay: 200, effect: 'fade' },
-                         style: "gformsstyle",
-                         position: {
-                          corner: {
-                               target: "topRight",
-                               tooltip: "bottomLeft"
-                               }
-                          }
-                      });
+                        jQuery( '.tooltip_mailchimp_groups' ).tooltip({
+                            show: 500,
+                            hide: 1000,
+                            content: function () {
+                                return jQuery(this).prop('title');
+                            }
+                        });
 
                     jQuery("#mailchimp_field_group").slideDown();
 
@@ -1137,7 +1134,7 @@ class GFMailChimp {
 			self::log_debug("Number of groups: " . count($groupings));
             $str = "<div id='mailchimp_groups_container' valign='top' class='margin_vertical_10'>";
 
-            $group_tooltip = "<a tooltip='&lt;h6&gt;Groups&lt;/h6&gt;When one or more groups are enabled, users will be assigned to the groups in addition to being subscribed to the MailChimp list. When disabled, users will not be assigned to groups.' class='tooltip tooltip_mailchimp_groups' onclick='return false;' href='#'>(?)</a>";
+            $group_tooltip = "<a title='&lt;h6&gt;Groups&lt;/h6&gt;When one or more groups are enabled, users will be assigned to the groups in addition to being subscribed to the MailChimp list. When disabled, users will not be assigned to groups.' class='tooltip tooltip_mailchimp_groups' onclick='return false;' href='#'>(?)</a>";
 
             $str .= "   <label for='mailchimp_groups' class='left_header'>" . __("Groups", "gravityformsmailchimp") . " " . $group_tooltip . "</label>";
             $str .= "   <div id='mailchimp_groups'>";
@@ -1641,7 +1638,7 @@ class GFMailChimp {
 
             $allow_resubscription = apply_filters( 'gform_mailchimp_allow_resubscription', apply_filters("gform_mailchimp_allow_resubscription_{$form['id']}", true, $form, $entry, $feed), $form, $entry, $feed );
             if(rgar($member_info["data"][0], "status") == "unsubscribed" && !$allow_resubscription) {
-                self::log_debug("User is unsubscrbed and resubscription is not allowed.");
+                self::log_debug("User is unsubscribed and resubscription is not allowed.");
                 return true;
             }
 
