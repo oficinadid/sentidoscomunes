@@ -12,9 +12,14 @@
 		<div class="full">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article>
-					<?php var_dump(get_the_author()) ?>
+					
 					<strong><?php $category = get_the_category(); echo $category[0]->cat_name; ?></strong>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+					<?php if (get_post_type() == 'post' ): ?>
+						<span>Por: <?php the_author() ?></span>
+					<?php endif ?>
+					
 					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink(); ?>" class="readmore">Seguir Leyendo</a>
 				</article>
