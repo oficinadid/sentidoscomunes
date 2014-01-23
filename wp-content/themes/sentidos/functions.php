@@ -90,6 +90,34 @@ function arphabet_widgets_init() {
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 register_nav_menu( 'primary', 'Main Menu' );
+
+
+
+/*  Agregamos suscriptores a dropdown autores 
+/* 	http://wordpress.stackexchange.com/questions/50827/select-subscriber-as-author-of-post-in-admin-panel
+/* ------------------------------------ */
+
+add_filter('wp_dropdown_users', 'MySwitchUser');
+function MySwitchUser($output)
+{
+
+    //global $post is available here, hence you can check for the post type here
+    $users = get_users('role=subscriber');
+
+    $output = "<select id=\"post_author_override\" name=\"post_author_override\" class=\"\">";
+
+    //Leave the admin in the list
+    $output .= "<option value=\"1\">Admin</option>";
+    foreach($users as $user)
+    {
+        $sel = ($post->post_author == $user->ID)?"selected='selected'":'';
+        $output .= '<option value="'.$user->ID.'"'.$sel.'>'.$user->user_login.'</option>';
+    }
+    $output .= "</select>";
+
+    return $output;
+}
+
 /**
  * Include posts from authors in the search results where
  * either their display name or user login matches the query string
