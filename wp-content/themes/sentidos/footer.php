@@ -72,8 +72,8 @@
 			</ul>
 			<ul>
 				<li><h4>Canales:</h4></li>
-				<li><a href="#">Playlist</a></li>
-				<li><a href="#">SC TV</a></li>
+				<li><a href="http://www.sentidoscomunes.cl/playlist/">Playlist</a></li>
+				<li><a href="http://www.sentidoscomunes.cl/categoria/sctv/">SC TV</a></li>
 			</ul>
 		</nav>
 	</div>

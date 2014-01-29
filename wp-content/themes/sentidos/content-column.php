@@ -21,7 +21,13 @@
 			<div id="the_content">
 				<div class="source">
 					<img src="<?php print_r(the_field('foto_columnista')); ?>">
-					<span><strong>Por:</strong> <?php the_field('columnista'); ?>, <?php echo get_the_date(); ?></span>
+
+					<?php if (get_field('columnista')): ?>
+					<span><strong>Por:</strong> <?php the_field('columnista'); ?>, <?php echo get_the_date(); ?></span>	
+					<?php else: ?>
+						<span><strong>Por:</strong> <?php the_author_posts_link(); ?>, <?php echo get_the_date(); ?></span>
+					<?php endif ?>
+					
 				</div>
 				<?php the_content(); ?>
 			</div>

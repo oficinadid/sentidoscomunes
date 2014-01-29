@@ -31,7 +31,13 @@
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
 				<p><?php the_excerpt(); ?></p>
 				<div class="full">
-					<h5>Por: <?php the_author() ?></h5>
+
+					<?php if (get_field('fuente')): ?>
+						<h5>Por: <?php echo get_field('fuente') ?></h5>
+					<?php else: ?>
+						<h5>Por: <?php the_author() ?></h5>
+					<?php endif ?>
+					
 					<a href="<?php the_permalink(); ?>" class="readmore">Seguir Leyendo</a>
 				</div>
 			</article>

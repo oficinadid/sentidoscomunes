@@ -99,13 +99,13 @@
 							 ?></a>
 						</h3>
 
-
-						<?php if (get_field('columnista', $the_post[0]->ID)) { ?>
+						
+						<?php if ((get_field('columnista', $the_post[0]->ID)) && (get_field('columnista', $the_post[0]->ID) != 'Sentidos Comunes')) { ?>
 							<small>Por: <?php the_field('columnista', $the_post[0]->ID); ?></small>
 						<?php } elseif (get_field('autor', $the_post[0]->ID)) { ?>
 							<small>Por: <?php the_field('autor', $the_post[0]->ID); ?></small>
 						<?php } else{ ?>
-							<small>Por: Sentidos Comunes</small>
+							<!-- <small>Por: Sentidos Comunes</small> -->
 						<?php } ?>
 
 					</div>
