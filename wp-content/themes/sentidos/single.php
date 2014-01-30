@@ -29,6 +29,8 @@
 
 				} else if (in_category( 'reportajes-graficos' )){
 					get_template_part( 'content', 'photos' );
+				} else if (in_category( 'sctv' )){
+					get_template_part( 'content', 'sctv' );
 				} else{
 					get_template_part( 'content', 'single' );
 
