@@ -164,3 +164,12 @@ function db_filter_user_query( &$user_query ) {
 		$user_query->query_where = str_replace( "user_nicename LIKE", "display_name LIKE", $user_query->query_where );
 	return $user_query;
 }
+
+
+/*  WP SEO by Yoast - modificamos tipo de Twitter Card
+/* ------------------------------------ */
+
+add_filter( 'wpseo_twitter_card_type', 'change_card_type', 20 );
+function change_card_type(  ) {
+	return 'summary_large_image';
+}
