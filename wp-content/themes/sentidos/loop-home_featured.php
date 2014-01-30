@@ -22,19 +22,6 @@
 		$featured = new WP_Query($args);
 
 		if($featured->have_posts()) : while($featured->have_posts()): $featured->the_post(); ?>
-<!-- 
-			<nav>
-				<?php
-					$count_posts = wp_count_posts('edicion');
-				?>
-				<div class="title">
-					<span>Nº<?php echo $count_posts->publish ?></span>
-					<a href="<?php the_permalink(); ?>" class="current"><?php the_title(); ?></a>
-				</div>
-
-				<a href="<?php echo get_bloginfo(url); ?>/edicion" class="back">Ediciónes Anteriores ›</a>
-			</nav> 
--->
 
 			<?php while(the_repeater_field('featured_posts')): ?>
 
