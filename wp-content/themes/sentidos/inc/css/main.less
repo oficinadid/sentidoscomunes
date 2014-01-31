@@ -970,7 +970,7 @@ section.secondary big, #recent_comments big {width:auto;}
 			a.banner img {float:left;}
 		}
 	}
-	.category-entrevistas{
+	.category-entrevistas {
 		.image{
 			float:left;
 			width:100%; max-height:240px;
@@ -1152,30 +1152,174 @@ section.secondary big, #recent_comments big {width:auto;}
 			}
 		}
 	}
-	&.category-sctv {
-		header.wrapper {
+	.category-sctv {
+		header{
 			border-top:1px solid #27a9e1;
+			.titles{
+				float:left;
+				width:100%!important;
+				border-right:0!important;
+				margin:20px 0;
+				text-align: center;
+				min-height:100px!important;
+				.title{
+					margin:10px 0 15px 0!important;padding:0!important;
+					width:100%!important;
+				}
+				strong{font-size:1.2em;text-transform:uppercase;}
+				.source{
+					font-family: @font_vollkorn;
+					font-style:italic;
+					font-size:1.2em;
+					color:#666;
+				}
+			}
 		}
-		.space {
-			padding:0;
-			.titles {
-				color:#58585b;
-				big {
-					color:#231f20;
-					font-size:14px;
+
+		.content{
+			margin:0!important;
+			float:right!important;
+			width:1040px!important;
+			border-left:1px solid #bbb;
+			border-right:0!important;
+		}
+		#the_content{
+			padding:0 0 20px 0!important;
+			h1{
+				float:left;
+				margin:20px 0 40px 120px!important;
+			}
+			h2{
+				margin:0 0 20px 200px!important;
+			}
+			h3{
+				margin:0 0 20px 200px!important;
+			}
+			h4{
+				margin:0 40px 20px 120px!important;
+			}
+			h5{
+				margin:0 0 20px 200px!important;
+			}
+			h6{
+				margin:0 0 20px 200px!important;
+			}
+			p{
+				margin:0 0 20px 200px!important;
+			}
+			.wp-caption{
+				p{
+					margin:0!important;
 				}
-				h1.title {
-					color:#231f20;
-					font-size:60px;
-					font-weight:300;
+			}
+			.alignnone{
+				margin:0 0 40px 120px!important;
+				max-width:920px!important;
+			}
+			p{
+				.alignnone{
+					margin:0 0 40px 0px!important;
+					max-width:920px!important;
 				}
-				ul {
-					li {
-						font-family: @font_vollkorn;
-						font-style:italic;
-						font-size:14px;
+			}
+			.alignleft{
+				margin:0 20px 20px 120px!important;
+			}
+		}
+		#comments{
+			margin:40px 0 20px 200px!important;
+		}
+
+		.meta{
+			float:left;
+			background:@grey;
+			padding:0;margin:0;
+			width:240px;
+			big{
+				font-size:1.2em;color:@cyan_light;
+				float:right;
+				padding:10px 10px 5px 10px;margin:0;
+				width:auto;
+			}
+			ul{
+				float:left;
+				list-style:none;
+				margin:5px 0 0 0;
+				border-top:1px solid #999;padding:0;
+				width:100%;
+				li{
+					float:left;width:100%;margin:0;padding:5px 10px;
+					&:hover{
+						background:#666;
+					}
+					a{
+						float:left;
+						color:white;
 					}
 				}
+			}
+			.tags{
+				padding:5px 10px;
+				li{
+					float:left;margin:0;padding:0;width:auto;
+					a{
+						float:left;margin:0;padding:3px;width:auto;
+					}
+				}
+			}
+			.social{
+				li{
+					margin:0;padding:0;float:left;width:auto;
+				}
+				a{
+					float:left;
+					padding:0;margin:0;
+					color:white;
+					text-transform:uppercase;
+				}
+				.twitter a 	{
+					.hidde_text;
+					background:url('../img/sprite_menu.png') left top no-repeat;
+					background-position:-285px -338px; 
+					width:45px;
+					height:40px;
+					&:hover {background-color:@twitter;}
+				}
+				.facebook a {
+					.hidde_text;
+					background:url('../img/sprite_menu.png') left top no-repeat;
+					background-position:-283px -450px;
+					width:45px;
+					height:40px;
+					&:hover {background-color:@facebook;}
+				}
+				.btn{
+					float:left;
+					padding:10px 15px;
+					height:40px;
+					background:@cyan;color:white;
+					text-transform:uppercase;
+					&:hover {background:@blue; .transition}
+				}
+				.comments{
+					margin:0;
+					float:left;
+					height:40px;
+					font-size:2.5em;font-weight:300;
+					padding:0 10px 0 25px;
+					background:#3a3a3c url('../img/icn_comments_mid.png') 5px 8px no-repeat;
+				}
+
+			}
+			small{float:left;width:100%;text-align:center;font-size:1.5em;text-transform:uppercase;margin:10px 0; visibility:hidden; display:none;}
+		&.fixed {position:fixed; top:auto; right:auto; left:auto; z-index:auto;}
+		}
+		
+		.article-wrap {
+			overflow: hidden;
+			clear: both;
+			.sticky-wrapper {
+				float: left;
 			}
 		}
 	}
@@ -1233,11 +1377,12 @@ section.secondary big, #recent_comments big {width:auto;}
 		text-align:center;
 		.fb-like {
 			display:inline-block;
-			margin:0 10px;
+			margin:0 3px;
 		}
-		a.twitter-share-button {
+		#twitter-widget-0 {
 			display:inline-block;
-			margin:0 10px;
+			margin:0 3px;
+			width:100px !important;
 		}
 	}
 	.otros {
