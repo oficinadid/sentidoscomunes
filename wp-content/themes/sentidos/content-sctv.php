@@ -5,12 +5,12 @@
 			<div class="titles">
 				<strong><?php $category = get_the_category(); echo $category[0]->cat_name; ?></strong>
 				<h1 class="title"><?php the_title(); ?></h1>
-				<p class="source">Por: <?php echo get_the_author(); ?> / Fotos: <?php echo the_field('fotografo'); ?> / <?php echo get_the_date(); ?></p>
+				<p class="source"><?php echo get_the_date(); ?></p>
 			</div>
 			<div class="cf"></div>
 
 			<div class="video">
-				<?php the_content(); ?>
+			<?php echo apply_filters('the_content', get_field('url_video') ); ?>
 			</div>	
 
 		</header>
@@ -125,7 +125,8 @@
 
 			<section class="content">
 				<div id="the_content">
-					<?php the_excerpt(); ?> 
+				<?php the_content(); ?>
+					
 				</div>
 				<div id="comments">
 					<?php comments_template( '', true ); ?>
