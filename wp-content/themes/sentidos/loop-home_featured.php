@@ -15,97 +15,52 @@
 	<section class="edition">
 
 		<?php
-		$args = array(
-			'post_type' => 'edicion',
-			'posts_per_page' => 1
-		);
-		$featured = new WP_Query($args);
+			$post_size = array(4,3,3,4,4,3,3,1,1,1,1);
 
-		if($featured->have_posts()) : while($featured->have_posts()): $featured->the_post(); ?>
+			$i = 0;
 
-			<?php while(the_repeater_field('featured_posts')): ?>
+			$args = array(
+				'post_type' => 'post',
+				'posts_per_page' => 11,
+				'cat' => -1
+				// 'temas' => get_query_var('temas')
+			);
+			$grid_temas = new WP_Query($args);
+
+
+			if($grid_temas->have_posts()) : while($grid_temas->have_posts()): $grid_temas->the_post(); ?>
 
 				<?php
-					$the_post = get_sub_field('post_destacado');
+					$exposts[] = get_the_ID();
 
-					// asignamos tamaño de imagen thumbnail
-					if (get_sub_field('tamano') == 'size1') {
-						$thumb_size = '320x214';
-					} elseif (get_sub_field('tamano') == 'size2') {
-						$thumb_size = '640x215';
-					} elseif (get_sub_field('tamano') == 'size3') {
+					if ($post_size[$i] == 1) {
+						$thumb_size = '320x215';
+					// } elseif ($post_size[$i] == 2) {
+					// 	$thumb_size = '640x215';
+					} elseif ($post_size[$i] == 3) {
 						$thumb_size = '320x430';
-					} elseif (get_sub_field('tamano') == 'size4') {
+					} elseif ($post_size[$i] == 4) {
 						$thumb_size = '640x430';
-					}
-
-				?>
-
-				<article class="post <?php the_sub_field('tamano') ?> <?php the_sub_field('color_destacado') ?> <?php $category = get_the_category( $the_post[0]->ID ); echo $category[0]->slug; ?>">
-					<a href="<?php echo get_permalink( $the_post[0]->ID ) ?>" class="img">
-
-					<?php if (get_sub_field('imagen_destacada')): ?>
-						<?php
-							$imgID = get_sub_field('imagen_destacada');
-							echo wp_get_attachment_image( $imgID, $thumb_size );
-						?>
-					<?php else: ?>
-
-						<?php if ($category[0]->cat_name != 'Ediciones'): ?>
-							<?php echo get_the_post_thumbnail( $the_post[0]->ID, $thumb_size ); ?>
-						<?php endif ?>
-						
-					<?php endif ?>
-
-
+					};
+				 ?>
+				<article class="post size<?php echo $post_size[$i] ?> none <?php $category = get_the_category( $the_post[0]->ID ); echo $category[0]->slug; ?>">
+					<a href="<?php the_permalink(); ?>" class="img">
+						<?php the_post_thumbnail($thumb_size); ?>
 					</a>
+
 					<div class="meta">
-						<h4>
-						<?php 
-							$category = get_the_category( $the_post[0]->ID );
-							if ($category[0]->cat_name == 'Ediciones') {
-								echo 'Editorial';
-							} else {
-								echo ($category[0]->cat_name);
-							}
-					
-							
-						?>
-						</h4>
+					<h4><?php echo $category[0]->cat_name ?></h4>
 						<h3>
-							<a href="<?php echo get_permalink( $the_post[0]->ID ) ?>"><?php
-								if ($category[0]->cat_name == 'Ediciones') {
-										echo get_field('titulo_editorial');
-								}else{
-									if (get_sub_field('titulo_opcional')) {
-										echo get_sub_field('titulo_opcional');
-									} else {
-										echo get_the_title( $the_post[0]->ID );
-									}
-								}							 	
-							 ?></a>
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</h3>
-
-						
-						<?php if ((get_field('columnista', $the_post[0]->ID)) && (get_field('columnista', $the_post[0]->ID) != 'Sentidos Comunes')) { ?>
-							<small>Por: <?php the_field('columnista', $the_post[0]->ID); ?></small>
-						<?php } elseif (get_field('autor', $the_post[0]->ID)) { ?>
-							<small>Por: <?php the_field('autor', $the_post[0]->ID); ?></small>
-						<?php } else{ ?>
-							<!-- <small>Por: Sentidos Comunes</small> -->
-						<?php } ?>
-
 					</div>
 				</article>
 
-			<?php endwhile; ?>
-
-
-		<?php endwhile;
-		wp_reset_postdata();
-		endif; ?>
+			<?php $i++; endwhile;
+			wp_reset_postdata();
+			endif; ?>
 
 		<div class="cf"></div>
-		
+
 	</section>
 </div>

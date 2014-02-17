@@ -3,7 +3,12 @@
 
 		<header class="full">
 			<figure class="image">
-				<?php the_post_thumbnail(); ?>
+				<?php if (get_field('imagen_header')): ?>
+					<img src="<?php echo get_field('imagen_header') ?>">
+				<?php else: ?>
+					<?php the_post_thumbnail(); ?>
+				<?php endif ?>
+
 			</figure>
 			<div class="titles">
 				<strong><?php $category = get_the_category(); echo $category[0]->cat_name; ?></strong>
@@ -13,9 +18,9 @@
 			<div class="cf"></div>
 		</header>
 
-		
-	
-		
+
+
+
 		<div class="article-wrap">
 			<section class="side">
 				<article class="comentarios">
@@ -33,7 +38,7 @@
 				<article class="otros">
 					<h4>En esta edición SC</h4>
 
-					<?php 
+					<?php
 						$edicion_entrevista = get_posts(  array(
 							'post_type' 		=> 'post',
 							'numberposts'		=>	1,
@@ -69,9 +74,9 @@
 
 
 					?>
-					
+
 					<?php foreach ($edicion_entrevista as $entrevista): ?>
-						
+
 						<div class="post">
 							<a href="<?php echo get_permalink( $entrevista->ID ) ?>">
 								<div class="img">
@@ -87,7 +92,7 @@
 					<?php endforeach ?>
 
 					<?php foreach ($edicion_infografia as $infografia): ?>
-						
+
 						<div class="post">
 							<a href="<?php echo get_permalink( $infografia->ID ) ?>">
 								<div class="img">
@@ -103,7 +108,7 @@
 					<?php endforeach ?>
 
 					<?php foreach ($edicion_reportaje as $reportaje): ?>
-						
+
 						<div class="post">
 							<a href="<?php echo get_permalink( $reportaje->ID ) ?>">
 								<div class="img">
@@ -118,11 +123,11 @@
 						</div>
 					<?php endforeach ?>
 
-					
+
 
 				</article>
 			</section>
-		
+
 
 			<section class="content">
 				<div id="the_content">
